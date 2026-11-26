@@ -1,1 +1,1354 @@
-{"characters": {"average": {"frame_w": 208, "frame_h": 224, "foot_y": 196, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "puck": {"frame_w": 192, "frame_h": 208, "foot_y": 180, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "brokk": {"frame_w": 192, "frame_h": 192, "foot_y": 164, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "sael": {"frame_w": 192, "frame_h": 208, "foot_y": 180, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "ghoul": {"frame_w": 184, "frame_h": 192, "foot_y": 164, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "cultist": {"frame_w": 192, "frame_h": 224, "foot_y": 196, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "brute": {"frame_w": 272, "frame_h": 288, "foot_y": 260, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}, "iron_brother": {"frame_w": 400, "frame_h": 416, "foot_y": 388, "anims": {"idle_down": {"row": 0, "col": 0, "count": 4}, "walk_down": {"row": 0, "col": 4, "count": 8}, "attack_down": {"row": 0, "col": 12, "count": 6}, "hurt_down": {"row": 0, "col": 18, "count": 2}, "cast_down": {"row": 0, "col": 20, "count": 4}, "death_down": {"row": 0, "col": 24, "count": 6}, "idle_side": {"row": 1, "col": 0, "count": 4}, "walk_side": {"row": 1, "col": 4, "count": 8}, "attack_side": {"row": 1, "col": 12, "count": 6}, "hurt_side": {"row": 1, "col": 18, "count": 2}, "cast_side": {"row": 1, "col": 20, "count": 4}, "death_side": {"row": 1, "col": 24, "count": 6}, "idle_up": {"row": 2, "col": 0, "count": 4}, "walk_up": {"row": 2, "col": 4, "count": 8}, "attack_up": {"row": 2, "col": 12, "count": 6}, "hurt_up": {"row": 2, "col": 18, "count": 2}, "cast_up": {"row": 2, "col": 20, "count": 4}, "death_up": {"row": 2, "col": 24, "count": 6}}, "scale": 0.25}}, "props": {"pine_0": {"w": 287, "h": 360, "scale": 0.25, "normal": true}, "pine_1": {"w": 318, "h": 400, "scale": 0.25, "normal": true}, "pine_2": {"w": 356, "h": 448, "scale": 0.25, "normal": true}, "pine_3": {"w": 299, "h": 376, "scale": 0.25, "normal": true}, "rock_0": {"w": 104, "h": 72, "scale": 0.25, "normal": true}, "rock_1": {"w": 88, "h": 60, "scale": 0.25, "normal": true}, "rock_2": {"w": 72, "h": 48, "scale": 0.25, "normal": true}, "grass_0": {"w": 40, "h": 36, "scale": 0.25, "normal": false}, "grass_1": {"w": 40, "h": 36, "scale": 0.25, "normal": false}, "grass_2": {"w": 40, "h": 36, "scale": 0.25, "normal": false}, "grass_3": {"w": 40, "h": 36, "scale": 0.25, "normal": false}, "reeds": {"w": 40, "h": 64, "scale": 0.25, "normal": false}, "fern": {"w": 89, "h": 72, "scale": 0.25, "normal": true}, "mushrooms_0": {"w": 48, "h": 36, "scale": 0.25, "normal": false}, "mushrooms_1": {"w": 48, "h": 36, "scale": 0.25, "normal": false}, "campfire_0": {"w": 112, "h": 120, "scale": 0.25, "normal": false}, "campfire_1": {"w": 112, "h": 120, "scale": 0.25, "normal": false}, "campfire_2": {"w": 112, "h": 120, "scale": 0.25, "normal": false}, "campfire_3": {"w": 112, "h": 120, "scale": 0.25, "normal": false}, "torch_0": {"w": 40, "h": 120, "scale": 0.25, "normal": false}, "brazier_0": {"w": 83, "h": 104, "scale": 0.25, "normal": false}, "torch_1": {"w": 40, "h": 120, "scale": 0.25, "normal": false}, "brazier_1": {"w": 83, "h": 104, "scale": 0.25, "normal": false}, "torch_2": {"w": 40, "h": 120, "scale": 0.25, "normal": false}, "brazier_2": {"w": 83, "h": 104, "scale": 0.25, "normal": false}, "dead_tree_0": {"w": 176, "h": 256, "scale": 0.25, "normal": true}, "dead_tree_1": {"w": 176, "h": 256, "scale": 0.25, "normal": true}, "standing_stone": {"w": 96, "h": 160, "scale": 0.25, "normal": true}, "moth_shrine": {"w": 166, "h": 216, "scale": 0.25, "normal": true}, "gibbet": {"w": 122, "h": 208, "scale": 0.25, "normal": true}, "corpse_0": {"w": 104, "h": 56, "scale": 0.25, "normal": true}, "corpse_1": {"w": 104, "h": 56, "scale": 0.25, "normal": true}, "corpse_2": {"w": 104, "h": 56, "scale": 0.25, "normal": true}, "ruin_wall_0": {"w": 240, "h": 272, "scale": 0.25, "normal": true}, "ruin_wall_1": {"w": 216, "h": 245, "scale": 0.25, "normal": true}, "ruin_wall_2": {"w": 264, "h": 300, "scale": 0.25, "normal": true}, "thorns": {"w": 160, "h": 104, "scale": 0.25, "normal": true}, "gate_closed": {"w": 208, "h": 276, "scale": 0.25, "normal": true}, "gate_open": {"w": 208, "h": 270, "scale": 0.25, "normal": true}, "bones": {"w": 48, "h": 24, "scale": 0.25, "normal": true}, "moth_0": {"w": 48, "h": 40, "scale": 0.25, "normal": false}, "moth_1": {"w": 48, "h": 40, "scale": 0.25, "normal": false}, "loot": {"w": 40, "h": 40, "scale": 0.25, "normal": true}, "nana": {"w": 120, "h": 150, "scale": 0.25, "normal": false}, "rift": {"scale": 0.25, "w": 132, "h": 232, "normal": true}}}
+{
+ "characters": {
+  "average": {
+   "frame_w": 208,
+   "frame_h": 224,
+   "foot_y": 196,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "puck": {
+   "frame_w": 192,
+   "frame_h": 208,
+   "foot_y": 180,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "brokk": {
+   "frame_w": 192,
+   "frame_h": 192,
+   "foot_y": 164,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "sael": {
+   "frame_w": 192,
+   "frame_h": 208,
+   "foot_y": 180,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "ghoul": {
+   "frame_w": 184,
+   "frame_h": 192,
+   "foot_y": 164,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "cultist": {
+   "frame_w": 192,
+   "frame_h": 224,
+   "foot_y": 196,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "brute": {
+   "frame_w": 272,
+   "frame_h": 288,
+   "foot_y": 260,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  },
+  "iron_brother": {
+   "frame_w": 400,
+   "frame_h": 416,
+   "foot_y": 388,
+   "anims": {
+    "idle_down": {
+     "row": 0,
+     "col": 0,
+     "count": 4
+    },
+    "walk_down": {
+     "row": 0,
+     "col": 4,
+     "count": 8
+    },
+    "attack_down": {
+     "row": 0,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_down": {
+     "row": 0,
+     "col": 18,
+     "count": 2
+    },
+    "cast_down": {
+     "row": 0,
+     "col": 20,
+     "count": 4
+    },
+    "death_down": {
+     "row": 0,
+     "col": 24,
+     "count": 6
+    },
+    "idle_side": {
+     "row": 1,
+     "col": 0,
+     "count": 4
+    },
+    "walk_side": {
+     "row": 1,
+     "col": 4,
+     "count": 8
+    },
+    "attack_side": {
+     "row": 1,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_side": {
+     "row": 1,
+     "col": 18,
+     "count": 2
+    },
+    "cast_side": {
+     "row": 1,
+     "col": 20,
+     "count": 4
+    },
+    "death_side": {
+     "row": 1,
+     "col": 24,
+     "count": 6
+    },
+    "idle_up": {
+     "row": 2,
+     "col": 0,
+     "count": 4
+    },
+    "walk_up": {
+     "row": 2,
+     "col": 4,
+     "count": 8
+    },
+    "attack_up": {
+     "row": 2,
+     "col": 12,
+     "count": 6
+    },
+    "hurt_up": {
+     "row": 2,
+     "col": 18,
+     "count": 2
+    },
+    "cast_up": {
+     "row": 2,
+     "col": 20,
+     "count": 4
+    },
+    "death_up": {
+     "row": 2,
+     "col": 24,
+     "count": 6
+    }
+   },
+   "scale": 0.25
+  }
+ },
+ "props": {
+  "pine_0": {
+   "w": 287,
+   "h": 360,
+   "scale": 0.25,
+   "normal": true
+  },
+  "pine_1": {
+   "w": 318,
+   "h": 400,
+   "scale": 0.25,
+   "normal": true
+  },
+  "pine_2": {
+   "w": 356,
+   "h": 448,
+   "scale": 0.25,
+   "normal": true
+  },
+  "pine_3": {
+   "w": 299,
+   "h": 376,
+   "scale": 0.25,
+   "normal": true
+  },
+  "rock_0": {
+   "w": 104,
+   "h": 72,
+   "scale": 0.25,
+   "normal": true
+  },
+  "rock_1": {
+   "w": 88,
+   "h": 60,
+   "scale": 0.25,
+   "normal": true
+  },
+  "rock_2": {
+   "w": 72,
+   "h": 48,
+   "scale": 0.25,
+   "normal": true
+  },
+  "grass_0": {
+   "w": 40,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "grass_1": {
+   "w": 40,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "grass_2": {
+   "w": 40,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "grass_3": {
+   "w": 40,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "reeds": {
+   "w": 40,
+   "h": 64,
+   "scale": 0.25,
+   "normal": false
+  },
+  "fern": {
+   "w": 89,
+   "h": 72,
+   "scale": 0.25,
+   "normal": true
+  },
+  "mushrooms_0": {
+   "w": 48,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "mushrooms_1": {
+   "w": 48,
+   "h": 36,
+   "scale": 0.25,
+   "normal": false
+  },
+  "campfire_0": {
+   "w": 112,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "campfire_1": {
+   "w": 112,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "campfire_2": {
+   "w": 112,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "campfire_3": {
+   "w": 112,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "torch_0": {
+   "w": 40,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "brazier_0": {
+   "w": 83,
+   "h": 104,
+   "scale": 0.25,
+   "normal": false
+  },
+  "torch_1": {
+   "w": 40,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "brazier_1": {
+   "w": 83,
+   "h": 104,
+   "scale": 0.25,
+   "normal": false
+  },
+  "torch_2": {
+   "w": 40,
+   "h": 120,
+   "scale": 0.25,
+   "normal": false
+  },
+  "brazier_2": {
+   "w": 83,
+   "h": 104,
+   "scale": 0.25,
+   "normal": false
+  },
+  "dead_tree_0": {
+   "w": 176,
+   "h": 256,
+   "scale": 0.25,
+   "normal": true
+  },
+  "dead_tree_1": {
+   "w": 176,
+   "h": 256,
+   "scale": 0.25,
+   "normal": true
+  },
+  "standing_stone": {
+   "w": 96,
+   "h": 160,
+   "scale": 0.25,
+   "normal": true
+  },
+  "moth_shrine": {
+   "w": 166,
+   "h": 216,
+   "scale": 0.25,
+   "normal": true
+  },
+  "gibbet": {
+   "w": 122,
+   "h": 208,
+   "scale": 0.25,
+   "normal": true
+  },
+  "corpse_0": {
+   "w": 104,
+   "h": 56,
+   "scale": 0.25,
+   "normal": true
+  },
+  "corpse_1": {
+   "w": 104,
+   "h": 56,
+   "scale": 0.25,
+   "normal": true
+  },
+  "corpse_2": {
+   "w": 104,
+   "h": 56,
+   "scale": 0.25,
+   "normal": true
+  },
+  "ruin_wall_0": {
+   "w": 240,
+   "h": 272,
+   "scale": 0.25,
+   "normal": true
+  },
+  "ruin_wall_1": {
+   "w": 216,
+   "h": 245,
+   "scale": 0.25,
+   "normal": true
+  },
+  "ruin_wall_2": {
+   "w": 264,
+   "h": 300,
+   "scale": 0.25,
+   "normal": true
+  },
+  "thorns": {
+   "w": 160,
+   "h": 104,
+   "scale": 0.25,
+   "normal": true
+  },
+  "gate_closed": {
+   "w": 208,
+   "h": 276,
+   "scale": 0.25,
+   "normal": true
+  },
+  "gate_open": {
+   "w": 208,
+   "h": 270,
+   "scale": 0.25,
+   "normal": true
+  },
+  "bones": {
+   "w": 48,
+   "h": 24,
+   "scale": 0.25,
+   "normal": true
+  },
+  "moth_0": {
+   "w": 48,
+   "h": 40,
+   "scale": 0.25,
+   "normal": false
+  },
+  "moth_1": {
+   "w": 48,
+   "h": 40,
+   "scale": 0.25,
+   "normal": false
+  },
+  "loot": {
+   "w": 40,
+   "h": 40,
+   "scale": 0.25,
+   "normal": true
+  },
+  "nana": {
+   "w": 120,
+   "h": 150,
+   "scale": 0.25,
+   "normal": false
+  },
+  "rift": {
+   "scale": 0.25,
+   "w": 132,
+   "h": 232,
+   "normal": true
+  },
+  "cem_cross_0": {
+   "w": 50,
+   "h": 105,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_cross_1": {
+   "w": 50,
+   "h": 106,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_cross_2": {
+   "w": 38,
+   "h": 79,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_cross_3": {
+   "w": 38,
+   "h": 61,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_cross_4": {
+   "w": 37,
+   "h": 81,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_stone_0": {
+   "w": 72,
+   "h": 47,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_stone_1": {
+   "w": 72,
+   "h": 47,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_stone_2": {
+   "w": 78,
+   "h": 47,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_stone_3": {
+   "w": 41,
+   "h": 43,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_column": {
+   "w": 30,
+   "h": 84,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_angel_0": {
+   "w": 180,
+   "h": 184,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_angel_1": {
+   "w": 130,
+   "h": 184,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_angel_s0": {
+   "w": 62,
+   "h": 108,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_angel_s1": {
+   "w": 101,
+   "h": 99,
+   "scale": 0.5,
+   "normal": false
+  },
+  "cem_angel_s2": {
+   "w": 54,
+   "h": 105,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_thorn_0": {
+   "w": 110,
+   "h": 80,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_thorn_1": {
+   "w": 94,
+   "h": 53,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_thorn_2": {
+   "w": 58,
+   "h": 46,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_deadtree_0": {
+   "w": 63,
+   "h": 89,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_deadtree_1": {
+   "w": 59,
+   "h": 69,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_tree_0": {
+   "w": 59,
+   "h": 74,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_tree_1": {
+   "w": 49,
+   "h": 63,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_rock_0": {
+   "w": 57,
+   "h": 56,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_rock_1": {
+   "w": 45,
+   "h": 44,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_rock_2": {
+   "w": 34,
+   "h": 33,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_ruin_0": {
+   "w": 80,
+   "h": 95,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_ruin_1": {
+   "w": 79,
+   "h": 62,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_ruin_2": {
+   "w": 55,
+   "h": 54,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_log_0": {
+   "w": 84,
+   "h": 39,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_stump_0": {
+   "w": 41,
+   "h": 31,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_crystal_0": {
+   "w": 46,
+   "h": 50,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_crystal_1": {
+   "w": 39,
+   "h": 36,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_arm_0": {
+   "w": 61,
+   "h": 62,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_arm_1": {
+   "w": 45,
+   "h": 57,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_arm_2": {
+   "w": 31,
+   "h": 53,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_arm_3": {
+   "w": 28,
+   "h": 43,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_skulls": {
+   "w": 71,
+   "h": 51,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bush_0": {
+   "w": 64,
+   "h": 58,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bush_1": {
+   "w": 42,
+   "h": 37,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_0": {
+   "w": 16,
+   "h": 18,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_1": {
+   "w": 15,
+   "h": 18,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_2": {
+   "w": 16,
+   "h": 19,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_3": {
+   "w": 16,
+   "h": 21,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_4": {
+   "w": 13,
+   "h": 18,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_grave_5": {
+   "w": 15,
+   "h": 16,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bones_0": {
+   "w": 48,
+   "h": 48,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bones_1": {
+   "w": 34,
+   "h": 35,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bones_2": {
+   "w": 27,
+   "h": 44,
+   "scale": 0.5,
+   "normal": false
+  },
+  "ud_bones_3": {
+   "w": 31,
+   "h": 64,
+   "scale": 0.5,
+   "normal": false
+  }
+ }
+}

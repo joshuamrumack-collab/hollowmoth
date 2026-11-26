@@ -10,7 +10,7 @@
  "tileheight": 16,
  "infinite": false,
  "nextlayerid": 10,
- "nextobjectid": 49,
+ "nextobjectid": 58,
  "tilesets": [],
  "properties": [
   {
@@ -1225,7 +1225,7 @@
     {
      "id": 29,
      "name": "",
-     "type": "standing_stone",
+     "type": "cem_angel_0",
      "rotation": 0,
      "visible": true,
      "x": 1760,
@@ -1237,6 +1237,114 @@
     {
      "id": 30,
      "name": "",
+     "type": "cem_cross_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1640,
+     "y": 1625,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 31,
+     "name": "",
+     "type": "cem_stone_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 1688,
+     "y": 1639,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 32,
+     "name": "",
+     "type": "cem_cross_2",
+     "rotation": 0,
+     "visible": true,
+     "x": 1736,
+     "y": 1625,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 33,
+     "name": "",
+     "type": "cem_stone_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1784,
+     "y": 1639,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 34,
+     "name": "",
+     "type": "cem_cross_4",
+     "rotation": 0,
+     "visible": true,
+     "x": 1832,
+     "y": 1625,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 35,
+     "name": "",
+     "type": "cem_stone_2",
+     "rotation": 0,
+     "visible": true,
+     "x": 1880,
+     "y": 1639,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 36,
+     "name": "",
+     "type": "cem_cross_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 600,
+     "y": 1030,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 37,
+     "name": "",
+     "type": "cem_stone_3",
+     "rotation": 0,
+     "visible": true,
+     "x": 680,
+     "y": 1090,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 38,
+     "name": "",
+     "type": "cem_angel_s1",
+     "rotation": 0,
+     "visible": true,
+     "x": 2600,
+     "y": 1640,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 39,
+     "name": "",
      "type": "gibbet",
      "rotation": 0,
      "visible": true,
@@ -1247,7 +1355,7 @@
      "point": true
     },
     {
-     "id": 31,
+     "id": 40,
      "name": "",
      "type": "gibbet",
      "rotation": 0,
@@ -1259,7 +1367,7 @@
      "point": true
     },
     {
-     "id": 32,
+     "id": 41,
      "name": "",
      "type": "gibbet",
      "rotation": 0,
@@ -1271,7 +1379,7 @@
      "point": true
     },
     {
-     "id": 33,
+     "id": 42,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1283,7 +1391,7 @@
      "point": true
     },
     {
-     "id": 34,
+     "id": 43,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1295,7 +1403,7 @@
      "point": true
     },
     {
-     "id": 35,
+     "id": 44,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1307,7 +1415,7 @@
      "point": true
     },
     {
-     "id": 36,
+     "id": 45,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1319,7 +1427,7 @@
      "point": true
     },
     {
-     "id": 37,
+     "id": 46,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1331,7 +1439,7 @@
      "point": true
     },
     {
-     "id": 38,
+     "id": 47,
      "name": "",
      "type": "brazier",
      "rotation": 0,
@@ -1343,7 +1451,7 @@
      "point": true
     },
     {
-     "id": 39,
+     "id": 48,
      "name": "",
      "type": "gibbet",
      "rotation": 0,
@@ -1355,7 +1463,7 @@
      "point": true
     },
     {
-     "id": 40,
+     "id": 49,
      "name": "",
      "type": "gibbet",
      "rotation": 0,
@@ -1367,7 +1475,7 @@
      "point": true
     },
     {
-     "id": 41,
+     "id": 50,
      "name": "",
      "type": "standing_stone",
      "rotation": 0,
@@ -1379,7 +1487,7 @@
      "point": true
     },
     {
-     "id": 42,
+     "id": 51,
      "name": "",
      "type": "mushrooms_1",
      "rotation": 0,
@@ -1391,7 +1499,7 @@
      "point": true
     },
     {
-     "id": 43,
+     "id": 52,
      "name": "",
      "type": "mushrooms_1",
      "rotation": 0,
@@ -1403,7 +1511,7 @@
      "point": true
     },
     {
-     "id": 44,
+     "id": 53,
      "name": "",
      "type": "corpse_1",
      "rotation": 0,
@@ -1415,7 +1523,7 @@
      "point": true
     },
     {
-     "id": 45,
+     "id": 54,
      "name": "",
      "type": "standing_stone",
      "rotation": 0,
@@ -1427,7 +1535,7 @@
      "point": true
     },
     {
-     "id": 46,
+     "id": 55,
      "name": "",
      "type": "rock_0",
      "rotation": 0,
@@ -1439,7 +1547,7 @@
      "point": true
     },
     {
-     "id": 47,
+     "id": 56,
      "name": "",
      "type": "rock_1",
      "rotation": 0,

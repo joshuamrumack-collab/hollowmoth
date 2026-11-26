@@ -175,6 +175,19 @@ func _ready() -> void:
 	ground.centered = false
 	ground.scale = Vector2(L["tex"], L["tex"])
 	world.add_child(ground)
+	# where you can walk: shadow beyond the edge and a faint lip along it (tools/artgen/edge_overlay.py)
+	if L.has("edge_overlay"):
+		var et: Texture2D = Art.tex(L["edge_overlay"])
+		if et != null:
+			var edge := Sprite2D.new()
+			edge.texture = et
+			edge.centered = false
+			edge.scale = Vector2(L.get("edge_scale", 2.0), L.get("edge_scale", 2.0))
+			edge.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+			var em := CanvasItemMaterial.new()
+			em.light_mode = CanvasItemMaterial.LIGHT_MODE_UNSHADED
+			edge.material = em
+			world.add_child(edge)
 	ground_layer = Node2D.new()
 	world.add_child(ground_layer)
 	decal_node = Node2D.new()
@@ -1730,7 +1743,39 @@ func steer(c: Combatant, desired: Vector2) -> Vector2:
 	var player_driven: bool = c == leader and not autotest
 	if walk_img != null and not player_driven:
 		dir = _wall_follow(c, dir)
+		dir = _unstick(c, dir)
 	return dir * min(desired.length(), 1.0)
+
+
+## AI that wants to move but hasn't gone anywhere for a while takes a short detour sideways
+## (breaks the rare tug-of-war between a wall, a rock and the way it wants to go).
+func _unstick(c: Combatant, dir: Vector2) -> Vector2:
+	var dt := get_physics_process_delta_time()
+	var det: float = c.get_meta("detour_t", 0.0)
+	if det > 0.0:
+		c.set_meta("detour_t", det - dt)
+		return c.get_meta("detour_dir", dir)
+	var p := c.global_position
+	var lp: Vector2 = c.get_meta("st_pos", p)
+	var st: float = c.get_meta("st_t", 0.0)
+	if p.distance_to(lp) > 4.0:
+		c.set_meta("st_pos", p)
+		st = 0.0
+	else:
+		st += dt
+	if st > 0.9:
+		st = 0.0
+		var side: float = [1.0, -1.0].pick_random()
+		for a in [PI / 2.0, PI * 0.75, PI / 3.0, PI]:
+			for sd in [side, -side]:
+				var d := dir.rotated(a * sd)
+				if is_walkable(p + d * 14.0, c.radius) and is_walkable(p + d * 28.0, c.radius):
+					c.set_meta("detour_dir", d)
+					c.set_meta("detour_t", 0.7)
+					c.set_meta("st_t", 0.0)
+					return d
+	c.set_meta("st_t", st)
+	return dir
 
 
 ## Probe ahead; if the way is blocked, turn (keeping to one side) until it is open.
@@ -3046,7 +3091,22 @@ func autotest_goal() -> Variant:
 	if leader.global_position.distance_to(wp) < 22.0:
 		route_i += 1
 		return null
+	# pushed off the road (a fight, a dodge): walk back to the last waypoint first
+	if route_i > 0 and not _clear_line(leader.global_position, wp):
+		var back := _v(route[route_i - 1])
+		if leader.global_position.distance_to(back) > 12.0:
+			return back
 	return wp
+
+
+func _clear_line(a: Vector2, b: Vector2) -> bool:
+	var n := int(a.distance_to(b) / 10.0)
+	for i in range(1, n):
+		# the ground only: rocks and stalls are small, the steering walks round those
+		var q := a.lerp(b, float(i) / n)
+		if (walk_img != null and not _mask_ok(q)) or (walk_img == null and not is_walkable(q, 6.0)):
+			return false
+	return true
 
 
 func _autotest(delta: float) -> void:

@@ -110,10 +110,28 @@ def build(name, art, assets, meta, extra_props=(), preview=None, level_file=None
     props = M.mock_props(sd, water, PX) + list(extra_props)
     solids = [{"pos": [round(p["pos"][0]), round(p["pos"][1])], "r": 12} for p in props
               if p["name"].startswith(("ruin_wall", "rock_0", "standing_stone", "gibbet"))]
+    # set pieces that stand on walkable ground block it, so what looks solid is solid
+    SOLID_R = {"cem_angel_s": 9, "cem_angel": 15, "cem_cross": 6, "cem_stone": 9, "cem_column": 6, "ud_rock_0": 11, "ud_rock_1": 9,
+               "ud_ruin_0": 16, "ud_ruin_1": 16, "ud_ruin_2": 9, "ud_deadtree": 8, "ud_tree_0": 10, "ud_skulls": 12, "ud_crystal_0": 8}
+    hh, ww = sd.shape
+    for p in props:
+        for pre, r in SOLID_R.items():
+            if p["name"].startswith(pre):
+                ix = int(min(ww - 1, max(0, p["pos"][0] * PX)))
+                iy = int(min(hh - 1, max(0, p["pos"][1] * PX)))
+                if sd[iy, ix] > -6:
+                    solids.append({"pos": [round(p["pos"][0]), round(p["pos"][1])], "r": r})
+                break
     for p in props:
         p["pos"] = [round(p["pos"][0]), round(p["pos"][1])]
         if p["name"].startswith("brazier_"):
             p["name"] = "brazier"       # the game animates and lights these
+    # a solid only matters where you could walk into it
+    def _near_walk(q):
+        ix = int(min(ww - 1, max(0, q["pos"][0] * PX)))
+        iy = int(min(hh - 1, max(0, q["pos"][1] * PX)))
+        return sd[iy, ix] > -(q["r"] + 4)
+    solids = [q for q in solids if _near_walk(q)]
     for key, prop in (("shrine", "moth_shrine"), ("campfire", "campfire")):
         if meta.get(key):
             props.append({"name": prop, "pos": list(meta[key])})

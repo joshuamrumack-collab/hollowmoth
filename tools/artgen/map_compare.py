@@ -234,10 +234,18 @@ def paint(px, art):
             if fl == "embers":
                 emb_mask = np.maximum(emb_mask, m_)
         sdb = sd[sl]
-        w_in = sm((sdb + 6) / 14)[..., None]
+        # a crisp edge: the walkable ground stays lit right up to its border (with a pale worn lip),
+        # the ground beyond drops into shadow and is greyed out, so you can read where you can go
+        w_in = sm((sdb + 2) / 6)[..., None]
         img = forest * (1 - w_in) + clear * w_in
-        rim = sm((sdb + 2) / 10) * (1 - sm((sdb - 8) / 10))
-        img *= (1 - 0.35 * rim)[..., None]
+        outm = (1 - sm((sdb + 3) / 14))[..., None]
+        grey = img.mean(-1, keepdims=True)
+        img = (img * (1 - 0.5 * outm) + grey * 0.5 * outm) * (1 - 0.62 * outm)
+        img *= (1 + 0.14 * sm((sdb - 2) / 6))[..., None]            # the path itself a touch brighter
+        shade = (sm((sdb + 14) / 9) * (1 - sm((sdb + 1) / 2.5)))[..., None]
+        img *= (1 - 0.6 * shade)
+        lip = (sm(sdb / 1.5) * (1 - sm((sdb - 5) / 3)))[..., None]
+        img += lip * np.array([48.0, 41.0, 28.0], f32)
         if emb is not None and emb_mask.max() > 0:
             glow = (0.85 * sm((emb[sl] - 0.74) / 0.06) * emb_mask)[..., None]
             img = img * (1 - glow) + np.array([210.0, 80.0, 30.0], f32) * glow
@@ -322,9 +330,18 @@ FOREST = {
     "frost": ["pine_0", "pine_1", "pine_2", "pine_1", "rock_0", "rock_1", "dead_tree_0"],
 }
 DRESS = {
-    "forest": ["grass_1", "grass_2", "fern", "rock_2", "mushrooms_1"],
-    "ash": ["bones", "bones", "rock_2", "corpse_0", "grass_3"],
-    "frost": ["rock_2", "grass_1", "bones", "rock_1"],
+    "forest": ["grass_1", "grass_2", "fern", "rock_2", "mushrooms_1", "ud_bush_1", "ud_stump_0"],
+    "ash": ["bones", "bones", "rock_2", "corpse_0", "grass_3", "ud_bones_0", "ud_bones_1", "ud_bones_2"],
+    "frost": ["rock_2", "grass_1", "bones", "rock_1", "ud_grave_0", "ud_grave_3", "ud_crystal_1", "cem_stone_0", "cem_stone_3"],
+}
+# a hedge of obstacles just outside every walkable edge (the Undead tileset), so borders read as walls
+EDGE = {
+    "forest": ["ud_thorn_0", "ud_thorn_1", "ud_thorn_2", "ud_thorn_2", "ud_deadtree_0", "ud_tree_0", "ud_tree_1",
+               "ud_rock_0", "ud_rock_1", "ud_bush_0", "ud_log_0", "ud_stump_0"],
+    "ash": ["ud_rock_0", "ud_rock_1", "ud_rock_2", "ud_deadtree_0", "ud_deadtree_1", "ud_ruin_2", "ud_arm_0",
+            "ud_arm_1", "ud_arm_2", "ud_arm_3", "ud_skulls", "ud_thorn_1", "ud_rock_2"],
+    "frost": ["ud_rock_0", "ud_rock_1", "ud_rock_2", "ud_crystal_0", "ud_crystal_1", "ud_crystal_0", "ud_ruin_2",
+              "cem_cross_0", "cem_cross_2", "cem_cross_4", "cem_stone_1", "cem_stone_2", "ud_deadtree_1", "ud_thorn_2"],
 }
 
 
@@ -353,6 +370,17 @@ def mock_props(sd, water, px):
         ix, iy = int(np.clip(x * px, 0, shape[1] - 1)), int(np.clip(y * px, 0, shape[0] - 1))
         return sd[iy, ix], water[iy, ix]
 
+    # the hedge first: close outside the edge, never on water
+    edge = EDGE.get(PALETTE, EDGE["forest"])
+    tries = int(60000 * (W * H) / (2400 * 1650))
+    for i in range(tries):
+        x, y = rnd.uniform(0, W), rnd.uniform(0, H)
+        s, wet = at(x, y)
+        if s > -9 or s < -30 or wet:
+            continue
+        # tall pieces lean north: keep their tops from covering the path to the south
+        if free(x, y, 17):
+            put(x, y, 17, rnd.choice(edge))
     trees = FOREST.get(PALETTE, FOREST["forest"])
     tries = int(26000 * (W * H) / (2400 * 1650))
     for i in range(tries):

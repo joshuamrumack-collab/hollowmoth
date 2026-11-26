@@ -277,7 +277,12 @@ def main():
     if act:
         # an act map replaces that act's level: level.json (Act I) or level_<n>.json
         name = "act%d" % act
-        B.build(name, art, assets, meta, extra, preview=preview, level_file="level.json" if act == 1 else "level_%d.json" % act)
+        lf = "level.json" if act == 1 else "level_%d.json" % act
+        B.build(name, art, assets, meta, extra, preview=preview, level_file=lf)
+        # the walk-here overlay (tools/artgen/edge_overlay.py)
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import edge_overlay
+        edge_overlay.build(os.path.join(assets, lf))
     else:
         B.build(name, art, assets, meta, extra, preview=preview)
 
