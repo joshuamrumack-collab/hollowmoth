@@ -190,9 +190,9 @@ C4 = {
              ("c4_1", {"walk1": (1, 0, 1)}),
              # the sprint frames play when he dashes
              ("c4_2", {"run0": (0, 0, 1), "run1": (1, 0, 1), "windup": (0, 1, 1), "cast": (1, 1, 1)})],
-    "average": [("c4_3", {"idle": (0, 0, 1), "back": (1, 0, 1), "windup": (0, 1, -1), "strike": (1, 1, 1)})],
+    "average": [("c4_3", {"idle": (0, 0, 1), "back": (1, 0, 1), "windup": (0, 1, 1), "strike": (1, 1, 1)})],
     "brokk": [("c4_4", {"idle": (0, 0, 1), "back": (1, 0, 1), "strike": (0, 1, 1), "dodge": (1, 1, 1)})],
-    "sael": [("c4_5", {"idle": (0, 0, 1), "back": (1, 0, 1), "walk0": (0, 1, -1), "walk1": (1, 1, -1)})],
+    "sael": [("c4_5", {"idle": (0, 0, 1), "back": (1, 0, 1), "walk0": (0, 1, 1), "walk1": (1, 1, 1)})],
 }
 C4_TARGET = {"puck": 32, "average": 37, "brokk": 29, "sael": 31}
 
