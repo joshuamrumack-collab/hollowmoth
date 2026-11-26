@@ -90,91 +90,97 @@ def frac(r, box):
     return [round((r[0] - box[0]) / W, 4), round((r[1] - box[1]) / H, 4), round((r[2] - box[0]) / W, 4), round((r[3] - box[1]) / H, 4)]
 
 
-meta = {}
-os.makedirs(UI, exist_ok=True)
 
-# ---------------- dialogue + menus
-s = load("Dialogue and menu.jpg")
-bg = np.array([27.0, 28.0, 32.0])
-d = patch_from(s, (2400, 345, 2565, 495), -260)                    # remove the moth glyph
-d = blank(d, (170, 158, 540, 524), (176, 160, 186, 170), 2.0)      # empty the portrait well
-box = (112, 50, 2640, 580)
-meta["dlg_box"] = {"size": list(save(cut_frame(d, box, bg), UI + "dlg_box.png", w=1840)),
-                   "well": frac((170, 158, 540, 524), box), "text": frac((600, 175, 2585, 505), box)}
-save(key_dark(s.crop((2400, 345, 2565, 495)), bg, 50.0), UI + "dlg_moth.png", 48)
-# menu panel with candles and the moth; the four bars come out as one reusable bar
-m = blank(s, (200, 900, 1056, 1405), (205, 1395, 1050, 1405), 3.0)
-box = (60, 600, 1140, 1490)
-meta["menu_panel"] = {"size": list(save(cut_frame(m, box, bg), UI + "menu_panel.png", w=800)), "inner": frac((200, 900, 1056, 1405), box)}
-meta["menu_bar"] = {"size": list(save(s.crop((242, 916, 1014, 1026)), UI + "menu_bar.png", w=600))}
-# bone-sealed card (feat cards)
-box = (1405, 655, 2006, 1488)
-meta["card"] = {"size": list(save(cut_frame(s, box, bg), UI + "card.png", w=360))}
-# options: slider + checkboxes
-tr = patch_from(s, (2300, 735, 2380, 797), -150)
-save(cut_frame(tr, (2075, 730, 2614, 802), bg), UI + "slider_track.png", w=480)
-save(cut_frame(s, (2318, 728, 2362, 804), bg), UI + "slider_knob.png", h=68)
-for nm, b in [("check_on", (2076, 1102, 2178, 1203)), ("check_x", (2077, 1216, 2177, 1317)), ("check_off", (2077, 1326, 2173, 1425))]:
-    save(cut_frame(s, b, bg), UI + nm + ".png", h=48)
+def main():
+    meta = {}
+    os.makedirs(UI, exist_ok=True)
 
-# ---------------- inventory
-s = load("Inventory.jpg")
-bg = np.array([25.0, 26.0, 30.0])
-p = blank(s, (106, 94, 1276, 1444), (500, 1420, 900, 1440), 3.0)
-box = (40, 28, 1346, 1520)
-meta["inv_panel"] = {"size": list(save(cut_frame(p, box, bg), UI + "inv_panel.png", h=960)), "inner": frac((106, 94, 1276, 1444), box)}
-COLS = [1638, 1796, 1955, 2116, 2274, 2435]
-ROWS = [159, 309, 464, 621, 779, 939, 1099, 1259]
-# the bag: keep the frame, wipe the grid off the board
-b = blank(s, (1562, 112, 2640, 1450), (1566, 500, 1622, 900), 4.0)
-box = (1496, 32, 2712, 1520)
-meta["inv_bag"] = {"size": list(save(cut_frame(b, box, bg), UI + "inv_bag.png", h=960)), "inner": frac((1562, 112, 2640, 1450), box)}
-save(s.crop((1636, 307, 1782, 455)), UI + "inv_cell.png", h=100)
-sl = blank(s, (191, 660, 343, 811), (196, 664, 206, 674), 2.0)
-save(sl.crop((158, 622, 376, 840)), UI + "inv_slot.png", h=128)
+    # ---------------- dialogue + menus
+    s = load("Dialogue and menu.jpg")
+    bg = np.array([27.0, 28.0, 32.0])
+    d = patch_from(s, (2400, 345, 2565, 495), -260)                    # remove the moth glyph
+    d = blank(d, (170, 158, 540, 524), (176, 160, 186, 170), 2.0)      # empty the portrait well
+    box = (112, 50, 2640, 580)
+    meta["dlg_box"] = {"size": list(save(cut_frame(d, box, bg), UI + "dlg_box.png", w=1840)),
+                       "well": frac((170, 158, 540, 524), box), "text": frac((600, 175, 2585, 505), box)}
+    save(key_dark(s.crop((2400, 345, 2565, 495)), bg, 50.0), UI + "dlg_moth.png", 48)
+    # menu panel with candles and the moth; the four bars come out as one reusable bar
+    m = blank(s, (200, 900, 1056, 1405), (205, 1395, 1050, 1405), 3.0)
+    box = (60, 600, 1140, 1490)
+    meta["menu_panel"] = {"size": list(save(cut_frame(m, box, bg), UI + "menu_panel.png", w=800)), "inner": frac((200, 900, 1056, 1405), box)}
+    meta["menu_bar"] = {"size": list(save(s.crop((242, 916, 1014, 1026)), UI + "menu_bar.png", w=600))}
+    # bone-sealed card (feat cards)
+    box = (1405, 655, 2006, 1488)
+    meta["card"] = {"size": list(save(cut_frame(s, box, bg), UI + "card.png", w=360))}
+    # options: slider + checkboxes
+    tr = patch_from(s, (2300, 735, 2380, 797), -150)
+    save(cut_frame(tr, (2075, 730, 2614, 802), bg), UI + "slider_track.png", w=480)
+    save(cut_frame(s, (2318, 728, 2362, 804), bg), UI + "slider_knob.png", h=68)
+    for nm, b in [("check_on", (2076, 1102, 2178, 1203)), ("check_x", (2077, 1216, 2177, 1317)), ("check_off", (2077, 1326, 2173, 1425))]:
+        save(cut_frame(s, b, bg), UI + nm + ".png", h=48)
 
-
-def cell(c, r, inset=14):
-    return s.crop((COLS[c] + inset, ROWS[r] + inset, COLS[c] + 142 - inset, ROWS[r] + 142 - inset))
+    # ---------------- inventory
+    s = load("Inventory.jpg")
+    bg = np.array([25.0, 26.0, 30.0])
+    p = blank(s, (106, 94, 1276, 1444), (500, 1420, 900, 1440), 3.0)
+    box = (40, 28, 1346, 1520)
+    meta["inv_panel"] = {"size": list(save(cut_frame(p, box, bg), UI + "inv_panel.png", h=960)), "inner": frac((106, 94, 1276, 1444), box)}
+    COLS = [1638, 1796, 1955, 2116, 2274, 2435]
+    ROWS = [159, 309, 464, 621, 779, 939, 1099, 1259]
+    # the bag: keep the frame, wipe the grid off the board
+    b = blank(s, (1562, 112, 2640, 1450), (1566, 500, 1622, 900), 4.0)
+    box = (1496, 32, 2712, 1520)
+    meta["inv_bag"] = {"size": list(save(cut_frame(b, box, bg), UI + "inv_bag.png", h=960)), "inner": frac((1562, 112, 2640, 1450), box)}
+    save(s.crop((1636, 307, 1782, 455)), UI + "inv_cell.png", h=100)
+    sl = blank(s, (191, 660, 343, 811), (196, 664, 206, 674), 2.0)
+    save(sl.crop((158, 622, 376, 840)), UI + "inv_slot.png", h=128)
 
 
-def frame_in(box, inset=26):
-    return s.crop((box[0] + inset, box[1] + inset, box[2] - inset, box[3] - inset))
+    def cell(c, r, inset=14):
+        return s.crop((COLS[c] + inset, ROWS[r] + inset, COLS[c] + 142 - inset, ROWS[r] + 142 - inset))
 
 
-icons = {
-    "book": cell(0, 0), "shuriken": cell(1, 0), "mushroom": cell(2, 2), "leaf": cell(0, 3), "axe": cell(5, 3),
-    "rune": cell(0, 4), "quiver": cell(4, 4), "mace": cell(2, 5), "plate": cell(3, 5), "gauntlet": cell(4, 5),
-    "potion": cell(5, 5), "sword": cell(1, 6), "leather": cell(2, 6), "herb": cell(3, 6), "keys": cell(4, 6),
-    "scroll": cell(5, 6), "helm": frame_in((578, 124, 780, 338)), "amulet": frame_in((814, 174, 962, 334), 18),
-    "cloak": frame_in((166, 330, 370, 598)), "cuirass": frame_in((166, 630, 370, 838)), "belt": frame_in((166, 870, 370, 1078)),
-    "gloves": frame_in((986, 630, 1192, 838)), "boots": frame_in((986, 870, 1192, 1078)), "ring": frame_in((842, 864, 962, 998), 16),
-    "rapier": frame_in((166, 1114, 370, 1394)), "pouch": frame_in((396, 1194, 570, 1390), 20), "shield": frame_in((598, 1194, 778, 1390), 20),
-}
-for nm, im in icons.items():
-    w, h = im.size
-    q = max(w, h)
-    sq = Image.new("RGB", (q, q), im.getpixel((2, 2)))
-    sq.paste(im, ((q - w) // 2, (q - h) // 2))
-    sq.resize((96, 96), Image.LANCZOS).save(OUT + "icon_item_%s.png" % nm)
+    def frame_in(box, inset=26):
+        return s.crop((box[0] + inset, box[1] + inset, box[2] - inset, box[3] - inset))
 
-# ---------------- sigils
-s = load("Sigil socketing.jpg")
-bg = np.array([24.0, 27.0, 32.0])
-pn = blank(s, (440, 388, 962, 938), (450, 395, 470, 415), 2.0)
-box = (100, 30, 1300, 1495)
-meta["sigil_panel"] = {"size": list(save(cut_frame(pn, box, bg), UI + "sigil_panel.png", h=920)),
-                       "window": frac((440, 388, 962, 938), box),
-                       "sockets": [frac((x - 48, 1083, x + 48, 1179), box) for x in (494, 626, 760, 894)],
-                       "plate": frac((514, 1321, 884, 1431), box)}
-SIG = ["moth", "eye", "star", "fire", "skull", "moon", "chain", "lightning", "thorn"]
-XS = [(1395, 1797), (1834, 2229), (2271, 2665)]
-YS = [(70, 538), (546, 1013), (1022, 1489)]
-for i, nm in enumerate(SIG):
-    x, y = XS[i % 3], YS[i // 3]
-    save(cut_glow(s, (x[0], y[0], x[1], y[1]), bg), OUT + "sigil_%s.png" % nm, 96)
 
-old = json.load(open(UI + "ui.json")) if os.path.exists(UI + "ui.json") else {}
-old.update(meta)
-json.dump(old, open(UI + "ui.json", "w"), indent=1)
-print("ui2 imported:", ", ".join(meta))
+    icons = {
+        "book": cell(0, 0), "shuriken": cell(1, 0), "mushroom": cell(2, 2), "leaf": cell(0, 3), "axe": cell(5, 3),
+        "rune": cell(0, 4), "quiver": cell(4, 4), "mace": cell(2, 5), "plate": cell(3, 5), "gauntlet": cell(4, 5),
+        "potion": cell(5, 5), "sword": cell(1, 6), "leather": cell(2, 6), "herb": cell(3, 6), "keys": cell(4, 6),
+        "scroll": cell(5, 6), "helm": frame_in((578, 124, 780, 338)), "amulet": frame_in((814, 174, 962, 334), 18),
+        "cloak": frame_in((166, 330, 370, 598)), "cuirass": frame_in((166, 630, 370, 838)), "belt": frame_in((166, 870, 370, 1078)),
+        "gloves": frame_in((986, 630, 1192, 838)), "boots": frame_in((986, 870, 1192, 1078)), "ring": frame_in((842, 864, 962, 998), 16),
+        "rapier": frame_in((166, 1114, 370, 1394)), "pouch": frame_in((396, 1194, 570, 1390), 20), "shield": frame_in((598, 1194, 778, 1390), 20),
+    }
+    for nm, im in icons.items():
+        w, h = im.size
+        q = max(w, h)
+        sq = Image.new("RGB", (q, q), im.getpixel((2, 2)))
+        sq.paste(im, ((q - w) // 2, (q - h) // 2))
+        sq.resize((96, 96), Image.LANCZOS).save(OUT + "icon_item_%s.png" % nm)
+
+    # ---------------- sigils
+    s = load("Sigil socketing.jpg")
+    bg = np.array([24.0, 27.0, 32.0])
+    pn = blank(s, (440, 388, 962, 938), (450, 395, 470, 415), 2.0)
+    box = (100, 30, 1300, 1495)
+    meta["sigil_panel"] = {"size": list(save(cut_frame(pn, box, bg), UI + "sigil_panel.png", h=920)),
+                           "window": frac((440, 388, 962, 938), box),
+                           "sockets": [frac((x - 48, 1083, x + 48, 1179), box) for x in (494, 626, 760, 894)],
+                           "plate": frac((514, 1321, 884, 1431), box)}
+    SIG = ["moth", "eye", "star", "fire", "skull", "moon", "chain", "lightning", "thorn"]
+    XS = [(1395, 1797), (1834, 2229), (2271, 2665)]
+    YS = [(70, 538), (546, 1013), (1022, 1489)]
+    for i, nm in enumerate(SIG):
+        x, y = XS[i % 3], YS[i // 3]
+        save(cut_glow(s, (x[0], y[0], x[1], y[1]), bg), OUT + "sigil_%s.png" % nm, 96)
+
+    old = json.load(open(UI + "ui.json")) if os.path.exists(UI + "ui.json") else {}
+    old.update(meta)
+    json.dump(old, open(UI + "ui.json", "w"), indent=1)
+    print("ui2 imported:", ", ".join(meta))
+
+
+if __name__ == "__main__":
+    main()

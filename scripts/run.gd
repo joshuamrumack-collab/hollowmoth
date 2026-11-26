@@ -31,6 +31,7 @@ func snapshot(main: Node) -> Dictionary:
 		"tactics": [main.tactics_rage, main.tactics_herbs, main.tactics_heal, main.tactics_draughts],
 		"seen": main.banter.seen.duplicate(),
 		"bag": main.bag.duplicate(true),
+		"draught_max": main.draught_max,
 	}
 
 
@@ -65,6 +66,8 @@ func apply(main: Node) -> String:
 	main.tactics_rage = t[0]; main.tactics_herbs = t[1]; main.tactics_heal = t[2]; main.tactics_draughts = t[3]
 	main.banter.seen = carry["seen"].duplicate()
 	main.bag = carry.get("bag", []).duplicate(true)
+	main.draught_max = int(carry.get("draught_max", 5))
+	main.draughts = main.draught_max
 	return carry["leader"]
 
 

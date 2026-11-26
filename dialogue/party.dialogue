@@ -618,3 +618,31 @@ Narrator: And beneath a sky full of stars, one brighter than the rest, the party
 Narrator: THE END.
 Narrator: A game by DorkTeach.
 => END
+
+
+~ npc_smith
+Narrator: A broad man works the forge beside the shrine. He does not look up.
+Harrow: Harrow. I mend what the dark breaks. Blades, buckles, bones if you're unlucky.
+Average: Can you make my axe bigger?
+Harrow: I can make it better. Bigger is your job.
+Brokk: Finally. Someone in this camp who respects metal.
+Harrow: Starlight pays. Bring me plenty and I'll temper your steel, or punch a socket for those glowing stones.
+=> END
+
+~ npc_alchemist
+Narrator: An old man in a mossy hood hums over a table of bubbling glass.
+Old Wick: Old Wick, at your service. Mostly at my own, but yours too, for Starlight.
+Puck: What's in the green one?
+Old Wick: Nothing you'd want in you. The red one, though. The red one keeps you breathing.
+Nana: I knew a man like you once. He sold my husband a love potion. It was turnip juice.
+Old Wick: ...It probably was. Draughts, flask belts, the odd sigil stone. Take your pick.
+=> END
+
+~ npc_gambler
+Narrator: A man in a wide hat leans on a crate, rolling a bone die between his knuckles.
+Grin: Name's Grin. You fight things. I sell you sacks. Sometimes the sack has a sword in it.
+Eowilas: And sometimes?
+Grin: Sometimes it has a slightly worse sword in it. That's the fun.
+Brokk: I'm writing you in the book.
+Grin: Everyone does, friend. Everyone does.
+=> END

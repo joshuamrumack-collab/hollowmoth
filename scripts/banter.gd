@@ -6,9 +6,12 @@ extends Node
 const PATH := "res://dialogue/party.dialogue"
 const SPEAKERS := {"Average": "average", "Puck": "puck", "Brokk": "brokk", "Eowilas": "sael", "Nana": "puck"}
 ## Nana speaks only while Puck lives, but she has her own face.
-const PORTRAITS := {"Nana": "nana"}
+const PORTRAITS := {"Nana": "nana", "Harrow": "smith", "Old Wick": "alchemist", "Grin": "gambler"}
+## The camp followers speak in conversations only (they are not party members).
+const NPC_SPEAKERS := ["Harrow", "Old Wick", "Grin"]
 const COLORS := {"Average": Color(0.95, 0.72, 0.55), "Puck": Color(0.65, 0.8, 1.0), "Nana": Color(0.8, 0.9, 0.85),
-	"Brokk": Color(0.95, 0.82, 0.45), "Eowilas": Color(0.85, 0.78, 1.0)}
+	"Brokk": Color(0.95, 0.82, 0.45), "Eowilas": Color(0.85, 0.78, 1.0),
+	"Harrow": Color(1.0, 0.62, 0.35), "Old Wick": Color(0.6, 0.95, 0.6), "Grin": Color(0.85, 0.65, 0.95)}
 
 var main: Node
 var res: Resource
@@ -213,7 +216,7 @@ func talk(cue: String, once := true) -> void:
 
 
 func _speaker_ok(name: String) -> bool:
-	return name == "" or name == "Narrator" or _can_speak(name)
+	return name == "" or name == "Narrator" or name in NPC_SPEAKERS or _can_speak(name)
 
 
 func _skip_dead_lines() -> void:
@@ -322,9 +325,9 @@ func draw_talk(hud: CanvasItem) -> void:
 		var well: Rect2 = sub.call("well")
 		var text: Rect2 = sub.call("text")
 		hud.draw_texture_rect(bt, box, false)
-		if not narrator and SPEAKERS.has(who):
+		if not narrator and (SPEAKERS.has(who) or PORTRAITS.has(who)):
 			var p: float = pop.get(active_side, 1.0)
-			var pt := Art.portrait(PORTRAITS.get(who, SPEAKERS[who]))
+			var pt := Art.portrait(PORTRAITS.get(who, SPEAKERS.get(who, "")))
 			if pt != null:
 				var g: float = lerp(-6.0, 0.0, clamp(p, 0.0, 1.0))
 				hud.draw_texture_rect(pt, well.grow(g), false, Color(1, 1, 1, clamp(p * 1.5, 0.0, 1.0)))

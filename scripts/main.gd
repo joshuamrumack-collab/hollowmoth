@@ -16,6 +16,8 @@ var leader: Hero = null
 var command := "free"
 var focus_target: Combatant = null
 var draughts := 5
+var draught_max := 5             # Old Wick sells a longer flask belt
+var camp: Node                   # the camp followers (scripts/camp.gd)
 var starlight := 0
 
 # Tactics presets (from the design doc)
@@ -120,6 +122,9 @@ func _ready() -> void:
 	inv = preload("res://scripts/inventory.gd").new()
 	inv.main = self
 	add_child(inv)
+	camp = preload("res://scripts/camp.gd").new()
+	camp.main = self
+	add_child(camp)
 	_setup_input()
 	Rules.logged.connect(_on_log)
 	L = Art.level
@@ -187,6 +192,7 @@ func _ready() -> void:
 	fx_layer.add_child(fx)
 
 	_build_props()
+	camp.build()
 	_build_atmosphere()
 
 	for i in HERO_IDS.size():
@@ -300,7 +306,7 @@ func _apply_world(w: Dictionary) -> void:
 	if w.get("gate_open", false):
 		gate_open = true
 		gate_node.texture = Art.prop_lit("gate_open")
-	draughts = int(w.get("draughts", 5))
+	draughts = int(w.get("draughts", draught_max))
 	var m: Dictionary = w.get("moth", {})
 	if not m.is_empty():
 		_spawn_moth(Vector2(m["pos"][0], m["pos"][1]), int(m["amount"]))
@@ -330,7 +336,9 @@ func _begin_act() -> void:
 
 
 func _on_talk_done(cue: String) -> void:
-	if cue.begins_with("rift_enter") and rift_pending:
+	if cue.begins_with("npc_"):
+		camp.open_shop(cue.substr(4))
+	elif cue.begins_with("rift_enter") and rift_pending:
 		Run.goto_act(Run.act + 1, self)
 	elif ending and cue == L["areas"].filter(func(a): return a.get("final", false))[0].get("bossinfo", {}).get("dead", ""):
 		banter.talk("ending", false)
@@ -353,13 +361,24 @@ func _build_props() -> void:
 		var pos := _v(p["pos"])
 		match name:
 			"campfire":
-				var fire := AnimatedSprite2D.new()
-				fire.sprite_frames = Art.prop_frames("campfire", 4, 9.0)
-				fire.scale = Vector2(0.25, 0.25)
-				fire.offset = Vector2(0, -40)
-				fire.position = pos
-				fire.play("default")
-				actors.add_child(fire)
+				var cook: Texture2D = Art.prop("station_cookfire")
+				if cook != null:
+					# DorkTeach's camp fire: bench, cauldron and the flames
+					var cf := Sprite2D.new()
+					cf.texture = cook
+					cf.scale = Vector2(0.25, 0.25)
+					cf.offset = Vector2(0, -cook.get_height() / 2.0 + 20.0)
+					cf.position = pos
+					actors.add_child(cf)
+					solids.append({"pos": pos, "r": 14.0})
+				else:
+					var fire := AnimatedSprite2D.new()
+					fire.sprite_frames = Art.prop_frames("campfire", 4, 9.0)
+					fire.scale = Vector2(0.25, 0.25)
+					fire.offset = Vector2(0, -40)
+					fire.position = pos
+					fire.play("default")
+					actors.add_child(fire)
 				var l := _make_light(Color(1.0, 0.55, 0.25), 1.15, 3.4, 40.0)
 				l.position = pos + Vector2(0, -10)
 				world.add_child(l)
@@ -692,15 +711,40 @@ func _input(event: InputEvent) -> void:
 		return
 	if ui == "inventory" and not autotest:
 		inv.handle(event)
+	if ui == "shop" and not autotest:
+		camp.handle(event)
+		return
 	if ui == "level" and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var m: Vector2 = hud.get_local_mouse_position()
 		if not feat_offer.is_empty():
 			for k in feat_offer.size():
 				if _feat_card(k).has_point(m):
 					choose_feat(k)
+		elif Art.ui("lvl_panel") != null:
+			var rr := _lvl_rects()
+			var lm: Dictionary = Art.ui_info("shrine_panel")
+			for i in 4:
+				if _sub(rr["right"], lm["rows"][i]).has_point(m):
+					shrine_i = i
+					_shrine_do(i)
+			for pf in Art.ui_info("lvl_panel")["plus"]:
+				if _sub(rr["left"], pf).has_point(m):
+					try_level_up(leader)
 		elif Rect2(480.0 / 2.0 - 70.0, 146.0, 140.0, 14.0).has_point(m):
 			try_level_up(leader)
 		get_viewport().set_input_as_handled()
+	if ui == "level" and feat_offer.is_empty() and event is InputEventKey and event.pressed and not event.is_echo():
+		match event.physical_keycode:
+			KEY_UP, KEY_W:
+				shrine_i = (shrine_i + 3) % 4
+				get_viewport().set_input_as_handled()
+			KEY_DOWN, KEY_S:
+				shrine_i = (shrine_i + 1) % 4
+				get_viewport().set_input_as_handled()
+			KEY_ENTER, KEY_KP_ENTER:
+				_shrine_do(shrine_i)
+				get_viewport().set_input_as_handled()
+				return
 	var pressed: bool = (event is InputEventKey or event is InputEventJoypadButton or event is InputEventMouseButton) and event.is_pressed() and not event.is_echo()
 	if ui == "select" and pressed and (event is InputEventKey and event.physical_keycode == KEY_ESCAPE or event is InputEventJoypadButton and event.button_index == JOY_BUTTON_B):
 		set_ui("title")
@@ -957,6 +1001,8 @@ func _reset_area(id: String) -> void:
 
 func interact() -> void:
 	var p := leader.global_position
+	if active_area == "" and camp.try_interact(p):
+		return
 	if p.distance_to(shrine_pos) < 50.0:
 		try_rest()
 		return
@@ -1009,7 +1055,7 @@ func try_rest() -> void:
 	for h in heroes:
 		h.rest()
 	Sfx.play("shrine", null, -2.0, 0.0)
-	draughts = 5
+	draughts = draught_max
 	ring(shrine_pos, 70.0, Color(0.9, 0.9, 1.0))
 	# resting brings the dead back (except the Iron Brother)
 	for a in areas:
@@ -1146,7 +1192,7 @@ func _respawn_after_death() -> void:
 		h.rest()
 		h.position = shrine_pos + Vector2(-24 + i * 16, 50)
 		h.velocity = Vector2.ZERO
-	draughts = 5
+	draughts = draught_max
 	trail.clear()
 	route_i = 0
 	show_banner("THE MOTH SHRINE", "You wake by the fire", Color(0.75, 0.8, 1.0), 2.5)
@@ -1347,6 +1393,9 @@ func keep_walkable(before: Vector2, after: Vector2, r: float) -> Vector2:
 		return sy
 	if is_walkable(before, r):
 		return before
+	# already wedged into an edge: let them move anywhere that is still ground, so they can get out
+	if is_walkable(after, 0.0) and is_walkable(after, r * 0.5):
+		return after
 	# stuck somewhere invalid (e.g. a seal closed on us): nudge toward the nearest area
 	var best: Dictionary = areas[0]
 	for a in areas:
@@ -1677,7 +1726,30 @@ func steer(c: Combatant, desired: Vector2) -> Vector2:
 			var tangent := -lateral.normalized() if lateral.length() > 0.5 else dir.orthogonal()
 			var w: float = 1.0 - ahead / 40.0
 			dir = (dir * (1.0 - w) + tangent * (0.6 + w)).normalized()
+	# AI only: feel along walls instead of pushing into a corner of the walk mask
+	var player_driven: bool = c == leader and not autotest
+	if walk_img != null and not player_driven:
+		dir = _wall_follow(c, dir)
 	return dir * min(desired.length(), 1.0)
+
+
+## Probe ahead; if the way is blocked, turn (keeping to one side) until it is open.
+func _wall_follow(c: Combatant, dir: Vector2) -> Vector2:
+	var p := c.global_position
+	if is_walkable(p + dir * 12.0, c.radius) and is_walkable(p + dir * 24.0, c.radius):
+		c.set_meta("wall_side", 0)
+		return dir
+	var side: int = c.get_meta("wall_side", 0)
+	var sides := [side] if side != 0 else [1, -1]
+	for a in [0.45, 0.8, 1.15, 1.5, 1.9, 2.3]:
+		for sd in sides:
+			var d := dir.rotated(a * sd)
+			if is_walkable(p + d * 12.0, c.radius) and is_walkable(p + d * 24.0, c.radius):
+				c.set_meta("wall_side", sd)
+				return d
+	if side != 0:
+		c.set_meta("wall_side", -side)
+	return dir
 
 
 
@@ -2111,7 +2183,7 @@ func set_ui(s: String) -> void:
 		started = true
 	if not autotest:
 		var menu_from_title := s in ["options", "controls", "credits"] and menu_back == "title"
-		get_tree().paused = s in ["pause", "options", "controls", "credits", "inventory", "level", "talk"] and not menu_from_title
+		get_tree().paused = s in ["pause", "options", "controls", "credits", "inventory", "level", "talk", "shop"] and not menu_from_title
 
 
 func _menu_list() -> Array:
@@ -2601,7 +2673,7 @@ func _draw_play_hud() -> void:
 	hud.draw_texture_rect(Art.ui("slot_draught"), dr, false, Color(1, 1, 1) if draughts > 0 else Color(0.45, 0.45, 0.45))
 	_text(dr.position + Vector2(2, 7), "E", 6, Color(0.95, 0.75, 0.35), true)
 	# draughts as candles
-	for i in 5:
+	for i in draught_max:
 		var lit := i < draughts
 		hud.draw_texture_rect(Art.ui("candle_lit" if lit else "candle_out"), Rect2(dr.end.x + 3 + i * 9.0, H - 17, 9, 13), false)
 	# --- starlight (moth) above the stamina orb
@@ -2643,6 +2715,8 @@ func _draw_play_hud() -> void:
 		var prompt := ""
 		if p.distance_to(shrine_pos) < 50.0:
 			prompt = "F  rest at the Moth Shrine        L  level up"
+		elif camp.prompt(p) != "":
+			prompt = camp.prompt(p)
 		elif not gate_open and p.distance_to(_v(L["gate"]["pos"])) < 50.0:
 			prompt = "F  open the gate"
 		elif Run.act < Run.LAST_ACT and boss_dead and p.distance_to(rift_pos) < 46.0:
@@ -2691,6 +2765,7 @@ func _draw_hud() -> void:
 			_text_c(W / 2, 140, "YOU DIED", 34, Color(0.6, 0.06, 0.04))
 		"level": _draw_level_menu(W, H)
 		"inventory": inv.draw(W, H)
+		"shop": camp.draw(W, H)
 		"pause": _draw_pause()
 		"talk": banter.draw_talk(hud)
 		"options": _draw_options()
@@ -2698,7 +2773,152 @@ func _draw_hud() -> void:
 		"credits": _draw_credits()
 
 
+## The Moth Shrine (DorkTeach's shrine sheet): the hero's sheet on the left, the shrine's choices on the right.
+var shrine_i := 0
+
+
+func _shrine_rows() -> Array:
+	var cost := Hero.level_cost(leader.level)
+	return [["Level up  -  %d" % cost, starlight >= cost], ["Rest at the shrine", active_area == ""], ["The Party: gear & sigils", true], ["Leave the shrine", true]]
+
+
+func _shrine_do(i: int) -> void:
+	match i:
+		0: try_level_up(leader)
+		1:
+			set_ui("play")
+			try_rest()
+		2: set_ui("inventory")
+		_: set_ui("play")
+
+
+func _sub(r: Rect2, f: Array) -> Rect2:
+	return Rect2(r.position + Vector2(f[0], f[1]) * r.size, Vector2(f[2] - f[0], f[3] - f[1]) * r.size)
+
+
+func _lvl_rects() -> Dictionary:
+	var lt: Texture2D = Art.ui("lvl_panel")
+	var rt: Texture2D = Art.ui("shrine_panel")
+	var h := 236.0
+	var lw := h * (float(lt.get_width()) / float(lt.get_height()) if lt != null else 0.89)
+	var rw := h * (float(rt.get_width()) / float(rt.get_height()) if rt != null else 0.7)
+	var x0 := (480.0 - lw - rw - 10.0) / 2.0
+	return {"left": Rect2(x0, 17, lw, h), "right": Rect2(x0 + lw + 10.0, 17, rw, h)}
+
+
 func _draw_level_menu(W: float, H: float) -> void:
+	var o: Hero = leader
+	_dim(0.5)
+	if Art.ui("lvl_panel") == null:
+		_draw_level_menu_plain(W, H)
+		return
+	var rr := _lvl_rects()
+	var lp: Rect2 = rr["left"]
+	var rp: Rect2 = rr["right"]
+	var lm: Dictionary = Art.ui_info("lvl_panel")
+	var rm: Dictionary = Art.ui_info("shrine_panel")
+	hud.draw_texture_rect(Art.ui("lvl_panel"), lp, false)
+	hud.draw_texture_rect(Art.ui("shrine_panel"), rp, false)
+	# --- the hero
+	var pt := Art.portrait(o.hero_id)
+	if pt != null:
+		hud.draw_texture_rect(pt, _sub(lp, lm["well"]).grow(-1), false)
+	var cost := Hero.level_cost(o.level)
+	var b1 := _sub(lp, lm["bar1"]).grow(-2)
+	hud.draw_rect(Rect2(b1.position, Vector2(b1.size.x * clamp(float(o.hp) / o.max_hp, 0.0, 1.0), b1.size.y)), Color(0.62, 0.1, 0.1))
+	_text_c(b1.get_center().x, b1.get_center().y + 3, "HP %d / %d" % [o.hp, o.max_hp], 6, Color(0.95, 0.9, 0.85))
+	var b2 := _sub(lp, lm["bar2"]).grow(-2)
+	hud.draw_rect(Rect2(b2.position, Vector2(b2.size.x * clamp(float(starlight) / cost, 0.0, 1.0), b2.size.y)), Color(0.62, 0.52, 0.22))
+	_text_c(b2.get_center().x, b2.get_center().y + 3, "Starlight %d / %d" % [starlight, cost], 6, Color(0.95, 0.92, 0.8))
+	# what the next level brings
+	var now := {"hp": o.max_hp, "atk": o.atk_bonus(), "ac": o.ac, "sv": o.saves.duplicate(), "spd": int(o.speed)}
+	var keep_hp := o.hp
+	o.level += 1
+	o.recalc()
+	var nxt := {"hp": o.max_hp, "atk": o.atk_bonus(), "sv": o.saves.duplicate()}
+	o.level -= 1
+	o.recalc()
+	o.hp = keep_hp
+	var rows := [
+		["%s   level %d" % [o.display_name, o.level], "-> %d" % (o.level + 1)],
+		["Hit points  %d" % now["hp"], "-> %d" % nxt["hp"]],
+		["Attack  %+d" % now["atk"], "-> %+d" % nxt["atk"]],
+		["Saves  F%+d R%+d W%+d" % [now["sv"]["fort"], now["sv"]["ref"], now["sv"]["will"]], "-> %+d %+d %+d" % [nxt["sv"]["fort"], nxt["sv"]["ref"], nxt["sv"]["will"]]],
+	]
+	var can := starlight >= cost
+	for i in 4:
+		var r := _sub(lp, lm["rows"][i])
+		_text(Vector2(r.position.x + 7, r.get_center().y + 3), rows[i][0], 7, Color(0.95, 0.9, 0.78), true)
+		var gw := ThemeDB.fallback_font.get_string_size(rows[i][1], HORIZONTAL_ALIGNMENT_LEFT, -1, 6).x
+		_text(Vector2(r.end.x - gw - 6, r.get_center().y + 3), rows[i][1], 6, Color(0.6, 0.95, 0.6) if can else Color(0.6, 0.58, 0.54), true)
+		var pl := _sub(lp, lm["plus"][i])
+		if can and fmod(Time.get_ticks_msec() / 1000.0, 1.0) < 0.6:
+			hud.draw_rect(pl.grow(-1), Color(1.0, 0.85, 0.4, 0.25))
+	var ic: Array = lm["icons"]
+	var vals := ["AC %d" % now["ac"], "Speed %d" % now["spd"], "Will %+d" % now["sv"]["will"]]
+	for i in 3:
+		var r2 := _sub(lp, ic[i])
+		_text_c(r2.get_center().x, r2.end.y + 1, vals[i], 6, Color(0.9, 0.85, 0.72))
+	# --- the shrine
+	var cnt := _sub(rp, rm["count"])
+	_text_c(cnt.get_center().x, cnt.get_center().y + 3, "%d" % starlight, 6, Color(0.88, 0.9, 1.0))
+	var opts := _shrine_rows()
+	for i in opts.size():
+		var r3 := _sub(rp, rm["rows"][i])
+		var on := i == shrine_i
+		if on:
+			hud.draw_rect(r3.grow(-1), Color(0.95, 0.7, 0.3, 0.22))
+			hud.draw_rect(r3.grow(1), Color(1.0, 0.8, 0.4, 1.0), false, 1.0)
+			_moth(Vector2(r3.end.x - 9, r3.get_center().y), Color(0.95, 0.8, 0.45))
+		var col := Color(0.98, 0.92, 0.75) if opts[i][1] else Color(0.55, 0.52, 0.48)
+		_text(Vector2(r3.position.x + 6, r3.get_center().y + 3), opts[i][0], 6, col, true)
+	var fl: Array = o.feats.map(func(id): return Feats.info(id)["name"])
+	var fr4 := _sub(rp, rm["rows"][4])
+	var flines: Array = banter._wrap("Feats: " + (", ".join(fl) if not fl.is_empty() else "none yet"), fr4.size.x - 8, 6)
+	for li in min(3, flines.size()):
+		_text(Vector2(fr4.position.x + 4, fr4.position.y + 8 + li * 8), flines[li], 6, Color(0.62, 0.48, 0.72), false)
+	var plate := _sub(rp, rm["plate"])
+	_text_c(plate.get_center().x, plate.get_center().y + 3, "THE MOTH SHRINE", 7, Color(0.85, 0.85, 1.0))
+	_text_c(W / 2, H - 4, "Up/Down + Enter   1 / Space: level up   F / Esc: leave   Your companions level up with you.", 6, Color(0.6, 0.6, 0.62))
+	if not feat_offer.is_empty():
+		_dim(0.55)
+		_text_c(W / 2, 90, "%s reaches level %d. Choose a feat:" % [o.display_name, o.level], 9, Color(0.95, 0.88, 0.72))
+		_draw_feat_cards(o)
+
+
+func _draw_feat_cards(o: Hero) -> void:
+	var W := 480.0
+	var m: Vector2 = hud.get_local_mouse_position()
+	for k in feat_offer.size():
+		var fr := _feat_card(k)
+		var f: Dictionary = Feats.info(feat_offer[k])
+		var hot := fr.has_point(m)
+		var own: bool = f["who"] == o.hero_id
+		var ct: Texture2D = Art.ui("card")
+		if ct != null:
+			# DorkTeach's bone-sealed card: name above the bone, what it does below
+			hud.draw_texture_rect(ct, fr, false, Color(1.1, 1.05, 0.95) if hot else Color(0.82, 0.8, 0.78))
+			if hot:
+				hud.draw_rect(fr.grow(1), Color(1.0, 0.82, 0.45), false, 1.0)
+			elif own:
+				hud.draw_rect(fr.grow(1), Color(0.75, 0.55, 0.9, 0.8), false, 1.0)
+		else:
+			hud.draw_rect(fr, Color(0.14, 0.11, 0.09, 0.95) if hot else Color(0.07, 0.06, 0.06, 0.95))
+			hud.draw_rect(fr, Color(1.0, 0.82, 0.45) if hot else (Color(0.75, 0.55, 0.9) if own else Color(0.35, 0.3, 0.24)), false, 1.0)
+		_text_c(fr.get_center().x, fr.position.y + 22, "[%d]" % (k + 1), 7, Color(0.65, 0.6, 0.54), false)
+		var nl: Array = banter._wrap(f["name"], fr.size.x - 18, 8)
+		for ni in nl.size():
+			_text_c(fr.get_center().x, fr.position.y + 38 + ni * 9 - (nl.size() - 1) * 4, nl[ni], 8, Color(0.98, 0.9, 0.72), true)
+		var dl: Array = banter._wrap(f["desc"], fr.size.x - 18, 6)
+		for di in min(dl.size(), 5):
+			_text_c(fr.get_center().x, fr.position.y + 76 + di * 8, dl[di], 6, Color(0.78, 0.75, 0.68), false)
+		if own:
+			_text_c(fr.get_center().x, fr.end.y - 9, o.display_name + " only", 6, Color(0.8, 0.62, 0.95), false)
+	_text_c(W / 2, 236, "1 / 2 / 3 or click to choose", 7, Color(0.6, 0.6, 0.65))
+
+
+## The older flat shrine screen (if the shrine art is missing).
+func _draw_level_menu_plain(W: float, H: float) -> void:
 	var r := Rect2(W / 2 - 150, 50, 300, 196 if not feat_offer.is_empty() else 160)
 	_panel(r, 0.95)
 	_text_c(W / 2, 66, "THE MOTH SHRINE", 12, Color(0.85, 0.85, 1.0))
@@ -2878,6 +3098,17 @@ func _autotest(delta: float) -> void:
 				await get_tree().create_timer(0.05, true).timeout
 		if arg.begins_with("--show-ui=") and test_t > float(OS.get_cmdline_user_args()[OS.get_cmdline_user_args().find("--shot") + 1]) - 0.3:
 			ui = arg.substr(10)
+			if ui == "shrine":
+				ui = "level"
+				starlight = max(starlight, 400)
+			elif ui == "level" and feat_offer.is_empty() and not leader.feats.is_empty():
+				pass
+			if ui.begins_with("shop_"):
+				starlight = max(starlight, 2500)
+				if leader.gear["weapon"].is_empty():
+					leader.equip(Items.make("weapon", 0.3))
+				camp.open_shop(ui.substr(5))
+				ui = "shop"
 			var want_sockets := ui == "sockets"
 			if want_sockets:
 				ui = "inventory"
@@ -2887,7 +3118,7 @@ func _autotest(delta: float) -> void:
 				if leader.gear["weapon"].is_empty():
 					leader.equip(Items.make("weapon", 0.3))
 			menu_back = "pause" if ui != "title" else "title"
-			if ui == "level" and feat_offer.is_empty():
+			if ui == "level" and feat_offer.is_empty() and arg.ends_with("=level"):
 				leader.add_feat("toughness")
 				feat_offer = Feats.offer(leader.hero_id, leader.feats)
 			if ui == "inventory" and bag.is_empty():
