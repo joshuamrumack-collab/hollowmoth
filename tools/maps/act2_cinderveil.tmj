@@ -1,0 +1,1886 @@
+{
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.11.0",
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "width": 200,
+ "height": 144,
+ "tilewidth": 16,
+ "tileheight": 16,
+ "infinite": false,
+ "nextlayerid": 10,
+ "nextobjectid": 67,
+ "tilesets": [],
+ "properties": [
+  {
+   "name": "act",
+   "type": "int",
+   "value": 2
+  },
+  {
+   "name": "title",
+   "type": "string",
+   "value": "ACT II: THE CINDERVEIL"
+  },
+  {
+   "name": "subtitle",
+   "type": "string",
+   "value": "The Cinderveil"
+  },
+  {
+   "name": "palette",
+   "type": "string",
+   "value": "ash"
+  },
+  {
+   "name": "water",
+   "type": "string",
+   "value": "lava"
+  },
+  {
+   "name": "weather",
+   "type": "string",
+   "value": "ash"
+  },
+  {
+   "name": "night",
+   "type": "string",
+   "value": "0.42,0.34,0.36"
+  },
+  {
+   "name": "gate_after",
+   "type": "string",
+   "value": "grove"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "preview",
+   "type": "imagelayer",
+   "image": "act2_cinderveil_preview.png",
+   "opacity": 0.7,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "repeatx": false,
+   "repeaty": false
+  },
+  {
+   "id": 2,
+   "name": "clearings",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 1,
+     "name": "camp",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 607,
+       "y": 1960
+      },
+      {
+       "x": 594,
+       "y": 2026
+      },
+      {
+       "x": 555,
+       "y": 2093
+      },
+      {
+       "x": 462,
+       "y": 2105
+      },
+      {
+       "x": 378,
+       "y": 2107
+      },
+      {
+       "x": 298,
+       "y": 2081
+      },
+      {
+       "x": 266,
+       "y": 2019
+      },
+      {
+       "x": 229,
+       "y": 1960
+      },
+      {
+       "x": 242,
+       "y": 1892
+      },
+      {
+       "x": 290,
+       "y": 1832
+      },
+      {
+       "x": 383,
+       "y": 1833
+      },
+      {
+       "x": 460,
+       "y": 1823
+      },
+      {
+       "x": 523,
+       "y": 1858
+      },
+      {
+       "x": 608,
+       "y": 1888
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Rift's Edge"
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "ashfield",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1298,
+       "y": 1800
+      },
+      {
+       "x": 1284,
+       "y": 1900
+      },
+      {
+       "x": 1197,
+       "y": 1981
+      },
+      {
+       "x": 1059,
+       "y": 1990
+      },
+      {
+       "x": 944,
+       "y": 1981
+      },
+      {
+       "x": 820,
+       "y": 1965
+      },
+      {
+       "x": 749,
+       "y": 1889
+      },
+      {
+       "x": 670,
+       "y": 1800
+      },
+      {
+       "x": 713,
+       "y": 1699
+      },
+      {
+       "x": 807,
+       "y": 1622
+      },
+      {
+       "x": 932,
+       "y": 1582
+      },
+      {
+       "x": 1070,
+       "y": 1574
+      },
+      {
+       "x": 1166,
+       "y": 1648
+      },
+      {
+       "x": 1265,
+       "y": 1706
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Ash Fields"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "ghoul, ghoul, ghoul, cultist, ghoul, cultist, ghoul, brute"
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "mirror",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1530,
+       "y": 1800
+      },
+      {
+       "x": 1960,
+       "y": 1800
+      },
+      {
+       "x": 1990,
+       "y": 1870
+      },
+      {
+       "x": 1990,
+       "y": 2080
+      },
+      {
+       "x": 1940,
+       "y": 2130
+      },
+      {
+       "x": 1550,
+       "y": 2130
+      },
+      {
+       "x": 1500,
+       "y": 2070
+      },
+      {
+       "x": 1500,
+       "y": 1860
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Hall of Mirrors"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "mirror_wraith"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "flag"
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "THE GLASS MOURNER"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "She weeps for faces that are not hers"
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "wraith_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "wraith_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "The mirrors go dark. Something in them was grateful."
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "slag",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2821,
+       "y": 2060
+      },
+      {
+       "x": 2841,
+       "y": 2129
+      },
+      {
+       "x": 2770,
+       "y": 2183
+      },
+      {
+       "x": 2678,
+       "y": 2227
+      },
+      {
+       "x": 2573,
+       "y": 2196
+      },
+      {
+       "x": 2488,
+       "y": 2168
+      },
+      {
+       "x": 2397,
+       "y": 2130
+      },
+      {
+       "x": 2378,
+       "y": 2060
+      },
+      {
+       "x": 2426,
+       "y": 1999
+      },
+      {
+       "x": 2468,
+       "y": 1936
+      },
+      {
+       "x": 2571,
+       "y": 1919
+      },
+      {
+       "x": 2676,
+       "y": 1901
+      },
+      {
+       "x": 2746,
+       "y": 1957
+      },
+      {
+       "x": 2809,
+       "y": 2001
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Slag Pits"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "brute, brute, ghoul, ghoul"
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "mud"
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "ossuary",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 3022,
+       "y": 1380
+      },
+      {
+       "x": 2913,
+       "y": 1461
+      },
+      {
+       "x": 2888,
+       "y": 1565
+      },
+      {
+       "x": 2755,
+       "y": 1571
+      },
+      {
+       "x": 2628,
+       "y": 1628
+      },
+      {
+       "x": 2552,
+       "y": 1525
+      },
+      {
+       "x": 2417,
+       "y": 1487
+      },
+      {
+       "x": 2404,
+       "y": 1380
+      },
+      {
+       "x": 2419,
+       "y": 1274
+      },
+      {
+       "x": 2498,
+       "y": 1180
+      },
+      {
+       "x": 2643,
+       "y": 1183
+      },
+      {
+       "x": 2759,
+       "y": 1177
+      },
+      {
+       "x": 2886,
+       "y": 1197
+      },
+      {
+       "x": 2935,
+       "y": 1291
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Ossuary Road"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "brute, ghoul, brute, cultist, ghoul, cultist, ghoul, cultist"
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "bones"
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "grove",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1958,
+       "y": 950
+      },
+      {
+       "x": 1942,
+       "y": 1045
+      },
+      {
+       "x": 1864,
+       "y": 1117
+      },
+      {
+       "x": 1759,
+       "y": 1161
+      },
+      {
+       "x": 1642,
+       "y": 1158
+      },
+      {
+       "x": 1523,
+       "y": 1131
+      },
+      {
+       "x": 1476,
+       "y": 1038
+      },
+      {
+       "x": 1418,
+       "y": 950
+      },
+      {
+       "x": 1495,
+       "y": 870
+      },
+      {
+       "x": 1542,
+       "y": 789
+      },
+      {
+       "x": 1643,
+       "y": 747
+      },
+      {
+       "x": 1753,
+       "y": 760
+      },
+      {
+       "x": 1881,
+       "y": 765
+      },
+      {
+       "x": 1928,
+       "y": 860
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Moth Grove"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "shadow_moth"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "THE MOTHER OF MOTHS"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "The Black Butterfly's lost shadow"
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "moth_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "moth_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "The dark wings unravel into a thousand small and harmless moths."
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "gallery",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2202,
+       "y": 430
+      },
+      {
+       "x": 2198,
+       "y": 506
+      },
+      {
+       "x": 2137,
+       "y": 574
+      },
+      {
+       "x": 2026,
+       "y": 575
+      },
+      {
+       "x": 1927,
+       "y": 599
+      },
+      {
+       "x": 1834,
+       "y": 563
+      },
+      {
+       "x": 1772,
+       "y": 503
+      },
+      {
+       "x": 1787,
+       "y": 430
+      },
+      {
+       "x": 1812,
+       "y": 371
+      },
+      {
+       "x": 1848,
+       "y": 310
+      },
+      {
+       "x": 1927,
+       "y": 262
+      },
+      {
+       "x": 2025,
+       "y": 286
+      },
+      {
+       "x": 2117,
+       "y": 305
+      },
+      {
+       "x": 2167,
+       "y": 365
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Chained Gallery"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "cultist, cultist, cultist, ghoul, ghoul"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "throne",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1083,
+       "y": 520
+      },
+      {
+       "x": 1074,
+       "y": 640
+      },
+      {
+       "x": 966,
+       "y": 726
+      },
+      {
+       "x": 832,
+       "y": 771
+      },
+      {
+       "x": 684,
+       "y": 783
+      },
+      {
+       "x": 548,
+       "y": 731
+      },
+      {
+       "x": 455,
+       "y": 637
+      },
+      {
+       "x": 422,
+       "y": 520
+      },
+      {
+       "x": 465,
+       "y": 407
+      },
+      {
+       "x": 556,
+       "y": 317
+      },
+      {
+       "x": 682,
+       "y": 249
+      },
+      {
+       "x": 834,
+       "y": 264
+      },
+      {
+       "x": 978,
+       "y": 303
+      },
+      {
+       "x": 1080,
+       "y": 397
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "Ashmaw's Throne"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "dragon"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "final",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "embers"
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "ASHMAW THE CHAINED"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "The wyrm the Iron Brother kept on a leash"
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "dragon_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "dragon_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "Ashmaw is dead. The chains finally go quiet."
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#7fc97f"
+  },
+  {
+   "id": 3,
+   "name": "roads",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 9,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 570,
+       "y": 1920
+      },
+      {
+       "x": 720,
+       "y": 1870
+      },
+      {
+       "x": 800,
+       "y": 1830
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1280,
+       "y": 1830
+      },
+      {
+       "x": 1420,
+       "y": 1880
+      },
+      {
+       "x": 1520,
+       "y": 1930
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1985,
+       "y": 1900
+      },
+      {
+       "x": 2200,
+       "y": 1760
+      },
+      {
+       "x": 2450,
+       "y": 1500
+      },
+      {
+       "x": 2550,
+       "y": 1440
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 76.0
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1985,
+       "y": 2050
+      },
+      {
+       "x": 2200,
+       "y": 2070
+      },
+      {
+       "x": 2420,
+       "y": 2060
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 66.0
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 2480,
+       "y": 1280
+      },
+      {
+       "x": 2295,
+       "y": 1160
+      },
+      {
+       "x": 2050,
+       "y": 1000
+      },
+      {
+       "x": 1940,
+       "y": 970
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 76.0
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1810,
+       "y": 770
+      },
+      {
+       "x": 1880,
+       "y": 640
+      },
+      {
+       "x": 1930,
+       "y": 560
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 60.0
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1460,
+       "y": 900
+      },
+      {
+       "x": 1250,
+       "y": 760
+      },
+      {
+       "x": 1080,
+       "y": 640
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 800,
+       "y": 780
+      },
+      {
+       "x": 850,
+       "y": 1100
+      },
+      {
+       "x": 880,
+       "y": 1470
+      },
+      {
+       "x": 930,
+       "y": 1620
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 60.0
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#c9a26b"
+  },
+  {
+   "id": 4,
+   "name": "water",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 17,
+     "name": "water",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": -40,
+       "y": 1480
+      },
+      {
+       "x": 500,
+       "y": 1420
+      },
+      {
+       "x": 1000,
+       "y": 1490
+      },
+      {
+       "x": 1500,
+       "y": 1430
+      },
+      {
+       "x": 2000,
+       "y": 1460
+      },
+      {
+       "x": 2250,
+       "y": 1300
+      },
+      {
+       "x": 2330,
+       "y": 1050
+      },
+      {
+       "x": 2300,
+       "y": 700
+      },
+      {
+       "x": 2380,
+       "y": 300
+      },
+      {
+       "x": 2420,
+       "y": -40
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 90.0
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#4f8fd6"
+  },
+  {
+   "id": 5,
+   "name": "crossings",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 18,
+     "name": "bridge",
+     "type": "bridge",
+     "rotation": 0,
+     "visible": true,
+     "x": 2295,
+     "y": 1160,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 19,
+     "name": "ford",
+     "type": "ford",
+     "rotation": 0,
+     "visible": true,
+     "x": 878,
+     "y": 1478,
+     "width": 0,
+     "height": 0,
+     "point": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#e0d070"
+  },
+  {
+   "id": 6,
+   "name": "markers",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 20,
+     "name": "shrine",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 370,
+     "y": 1930,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 21,
+     "name": "campfire",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 470,
+     "y": 2020,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 22,
+     "name": "rift",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 290,
+     "y": 2030,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 23,
+     "name": "exit",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 760,
+     "y": 285,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 24,
+     "name": "gate",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 838,
+     "y": 1000,
+     "width": 0,
+     "height": 0,
+     "point": true,
+     "properties": [
+      {
+       "name": "open_from",
+       "type": "string",
+       "value": "0,-1"
+      }
+     ]
+    },
+    {
+     "id": 25,
+     "name": "route",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 420,
+       "y": 1960
+      },
+      {
+       "x": 570,
+       "y": 1920
+      },
+      {
+       "x": 800,
+       "y": 1830
+      },
+      {
+       "x": 1000,
+       "y": 1800
+      },
+      {
+       "x": 1280,
+       "y": 1830
+      },
+      {
+       "x": 1520,
+       "y": 1930
+      },
+      {
+       "x": 1750,
+       "y": 1960
+      },
+      {
+       "x": 1985,
+       "y": 1900
+      },
+      {
+       "x": 2200,
+       "y": 1760
+      },
+      {
+       "x": 2450,
+       "y": 1500
+      },
+      {
+       "x": 2700,
+       "y": 1380
+      },
+      {
+       "x": 2480,
+       "y": 1280
+      },
+      {
+       "x": 2295,
+       "y": 1160
+      },
+      {
+       "x": 2050,
+       "y": 1000
+      },
+      {
+       "x": 1700,
+       "y": 950
+      },
+      {
+       "x": 1460,
+       "y": 900
+      },
+      {
+       "x": 1250,
+       "y": 760
+      },
+      {
+       "x": 1080,
+       "y": 640
+      },
+      {
+       "x": 760,
+       "y": 520
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#ff7070"
+  },
+  {
+   "id": 7,
+   "name": "props",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 26,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1580,
+     "y": 1840,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 27,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1920,
+     "y": 1840,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 28,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1580,
+     "y": 2090,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 29,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1920,
+     "y": 2090,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 30,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1650,
+     "y": 1815,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 31,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1760,
+     "y": 1812,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 32,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1860,
+     "y": 1815,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 33,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1520,
+     "y": 1960,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 34,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1975,
+     "y": 1960,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 35,
+     "name": "",
+     "type": "ruin_wall_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1600,
+     "y": 2125,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 36,
+     "name": "",
+     "type": "ruin_wall_2",
+     "rotation": 0,
+     "visible": true,
+     "x": 1880,
+     "y": 2128,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 37,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1905.3973451620052,
+     "y": 1010.2384351324278,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 38,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1778.3880447636104,
+     "y": 1118.298216369719,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 39,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1592.3509478335088,
+     "y": 1107.1562119854664,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 40,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1487.3757828252574,
+     "y": 985.2025785364814,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 41,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1542.5109900931939,
+     "y": 844.2708894106136,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 42,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1716.2386340112973,
+     "y": 790.4855810021905,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 43,
+     "name": "",
+     "type": "dead_tree_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1877.7382553111267,
+     "y": 864.3480875631013,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 44,
+     "name": "",
+     "type": "moth_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1640,
+     "y": 900,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 45,
+     "name": "",
+     "type": "moth_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 1790,
+     "y": 1010,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 46,
+     "name": "",
+     "type": "moth_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1700,
+     "y": 1060,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 47,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 961.8439892347858,
+     "y": 616.2965969487566,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 48,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 765.4272146169092,
+     "y": 709.9498811271309,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 49,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 563.5832253821235,
+     "y": 623.6532841783744,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 50,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 558.1560107652142,
+     "y": 443.70340305124347,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 51,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 754.5727853830907,
+     "y": 350.0501188728691,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 52,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 956.4167746178766,
+     "y": 436.3467158216257,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 53,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 560,
+     "y": 430,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 54,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 960,
+     "y": 430,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 55,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 620,
+     "y": 660,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 56,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 900,
+     "y": 660,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 57,
+     "name": "",
+     "type": "ruin_wall_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 640,
+     "y": 330,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 58,
+     "name": "",
+     "type": "ruin_wall_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 880,
+     "y": 330,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 59,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 2600,
+     "y": 1300,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 60,
+     "name": "",
+     "type": "bones",
+     "rotation": 0,
+     "visible": true,
+     "x": 2720,
+     "y": 1420,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 61,
+     "name": "",
+     "type": "corpse_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 2800,
+     "y": 1350,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 62,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 1950,
+     "y": 400,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 63,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 2050,
+     "y": 470,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 64,
+     "name": "",
+     "type": "rock_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 330,
+     "y": 1880,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 65,
+     "name": "",
+     "type": "rock_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 520,
+     "y": 2060,
+     "width": 0,
+     "height": 0,
+     "point": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#c080ff"
+  }
+ ]
+}

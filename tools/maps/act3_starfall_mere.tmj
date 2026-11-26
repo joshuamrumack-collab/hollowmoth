@@ -1,0 +1,1804 @@
+{
+ "type": "map",
+ "version": "1.10",
+ "tiledversion": "1.11.0",
+ "orientation": "orthogonal",
+ "renderorder": "right-down",
+ "width": 200,
+ "height": 144,
+ "tilewidth": 16,
+ "tileheight": 16,
+ "infinite": false,
+ "nextlayerid": 10,
+ "nextobjectid": 62,
+ "tilesets": [],
+ "properties": [
+  {
+   "name": "act",
+   "type": "int",
+   "value": 3
+  },
+  {
+   "name": "title",
+   "type": "string",
+   "value": "ACT III: THE STARFALL MERE"
+  },
+  {
+   "name": "subtitle",
+   "type": "string",
+   "value": "The Starfall Mere"
+  },
+  {
+   "name": "palette",
+   "type": "string",
+   "value": "frost"
+  },
+  {
+   "name": "water",
+   "type": "string",
+   "value": "ice"
+  },
+  {
+   "name": "weather",
+   "type": "string",
+   "value": "snow"
+  },
+  {
+   "name": "night",
+   "type": "string",
+   "value": "0.36,0.4,0.52"
+  },
+  {
+   "name": "prop_tint",
+   "type": "string",
+   "value": "0.8,0.9,1.1"
+  },
+  {
+   "name": "gate_after",
+   "type": "string",
+   "value": "choir"
+  }
+ ],
+ "layers": [
+  {
+   "id": 1,
+   "name": "preview",
+   "type": "imagelayer",
+   "image": "act3_starfall_mere_preview.png",
+   "opacity": 0.7,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "repeatx": false,
+   "repeaty": false
+  },
+  {
+   "id": 2,
+   "name": "clearings",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 1,
+     "name": "camp",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 570,
+       "y": 1960
+      },
+      {
+       "x": 582,
+       "y": 2029
+      },
+      {
+       "x": 524,
+       "y": 2082
+      },
+      {
+       "x": 442,
+       "y": 2105
+      },
+      {
+       "x": 362,
+       "y": 2093
+      },
+      {
+       "x": 270,
+       "y": 2088
+      },
+      {
+       "x": 212,
+       "y": 2031
+      },
+      {
+       "x": 209,
+       "y": 1960
+      },
+      {
+       "x": 229,
+       "y": 1895
+      },
+      {
+       "x": 292,
+       "y": 1853
+      },
+      {
+       "x": 364,
+       "y": 1837
+      },
+      {
+       "x": 441,
+       "y": 1820
+      },
+      {
+       "x": 522,
+       "y": 1840
+      },
+      {
+       "x": 548,
+       "y": 1904
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Frozen Rift"
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "shore",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1271,
+       "y": 1720
+      },
+      {
+       "x": 1173,
+       "y": 1801
+      },
+      {
+       "x": 1098,
+       "y": 1859
+      },
+      {
+       "x": 1022,
+       "y": 1957
+      },
+      {
+       "x": 894,
+       "y": 1904
+      },
+      {
+       "x": 797,
+       "y": 1864
+      },
+      {
+       "x": 686,
+       "y": 1816
+      },
+      {
+       "x": 684,
+       "y": 1720
+      },
+      {
+       "x": 666,
+       "y": 1618
+      },
+      {
+       "x": 790,
+       "y": 1570
+      },
+      {
+       "x": 879,
+       "y": 1485
+      },
+      {
+       "x": 1009,
+       "y": 1527
+      },
+      {
+       "x": 1130,
+       "y": 1551
+      },
+      {
+       "x": 1237,
+       "y": 1616
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Starving Shore"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "ghoul@starved, ghoul, ghoul@starved, ghoul, cultist, ghoul@starved, brute"
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "warden",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1300,
+       "y": 1760
+      },
+      {
+       "x": 1700,
+       "y": 1760
+      },
+      {
+       "x": 1730,
+       "y": 1820
+      },
+      {
+       "x": 1730,
+       "y": 2030
+      },
+      {
+       "x": 1680,
+       "y": 2080
+      },
+      {
+       "x": 1320,
+       "y": 2080
+      },
+      {
+       "x": 1270,
+       "y": 2020
+      },
+      {
+       "x": 1270,
+       "y": 1810
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Lantern Shore"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "iron_brother@warden"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "flag"
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "THE LANTERN WARDEN"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "He feeds the dark one star at a time"
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "warden_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "warden_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "The lantern breaks. One star goes free."
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "drifts",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2495,
+       "y": 1850
+      },
+      {
+       "x": 2468,
+       "y": 1949
+      },
+      {
+       "x": 2382,
+       "y": 2026
+      },
+      {
+       "x": 2250,
+       "y": 2019
+      },
+      {
+       "x": 2140,
+       "y": 2051
+      },
+      {
+       "x": 2042,
+       "y": 2003
+      },
+      {
+       "x": 1963,
+       "y": 1938
+      },
+      {
+       "x": 1971,
+       "y": 1850
+      },
+      {
+       "x": 1989,
+       "y": 1772
+      },
+      {
+       "x": 2041,
+       "y": 1696
+      },
+      {
+       "x": 2147,
+       "y": 1672
+      },
+      {
+       "x": 2257,
+       "y": 1658
+      },
+      {
+       "x": 2337,
+       "y": 1717
+      },
+      {
+       "x": 2403,
+       "y": 1775
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Drifts"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "cultist, cultist, brute, ghoul, ghoul, cultist, brute, ghoul@starved"
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "snow"
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "hollows",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2994,
+       "y": 2020
+      },
+      {
+       "x": 2980,
+       "y": 2092
+      },
+      {
+       "x": 2892,
+       "y": 2125
+      },
+      {
+       "x": 2832,
+       "y": 2190
+      },
+      {
+       "x": 2740,
+       "y": 2152
+      },
+      {
+       "x": 2648,
+       "y": 2144
+      },
+      {
+       "x": 2623,
+       "y": 2077
+      },
+      {
+       "x": 2564,
+       "y": 2020
+      },
+      {
+       "x": 2620,
+       "y": 1962
+      },
+      {
+       "x": 2647,
+       "y": 1895
+      },
+      {
+       "x": 2732,
+       "y": 1863
+      },
+      {
+       "x": 2828,
+       "y": 1861
+      },
+      {
+       "x": 2902,
+       "y": 1905
+      },
+      {
+       "x": 2981,
+       "y": 1947
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Ice Hollows"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "brute, brute, ghoul@starved, ghoul@starved"
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "snow"
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "choir",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2829,
+       "y": 1100
+      },
+      {
+       "x": 2847,
+       "y": 1208
+      },
+      {
+       "x": 2754,
+       "y": 1291
+      },
+      {
+       "x": 2617,
+       "y": 1295
+      },
+      {
+       "x": 2490,
+       "y": 1340
+      },
+      {
+       "x": 2378,
+       "y": 1280
+      },
+      {
+       "x": 2345,
+       "y": 1181
+      },
+      {
+       "x": 2239,
+       "y": 1100
+      },
+      {
+       "x": 2327,
+       "y": 1012
+      },
+      {
+       "x": 2396,
+       "y": 939
+      },
+      {
+       "x": 2499,
+       "y": 891
+      },
+      {
+       "x": 2624,
+       "y": 879
+      },
+      {
+       "x": 2714,
+       "y": 949
+      },
+      {
+       "x": 2827,
+       "y": 999
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Singing Ring"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "mirror_wraith@choir"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "snow"
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "THE PALE CHOIR"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "They sing the stars to sleep"
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "choir_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "choir_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "The lullaby ends. Under the ice, the stars wake up."
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "ridge",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 2209,
+       "y": 640
+      },
+      {
+       "x": 2146,
+       "y": 707
+      },
+      {
+       "x": 2086,
+       "y": 760
+      },
+      {
+       "x": 2005,
+       "y": 811
+      },
+      {
+       "x": 1904,
+       "y": 782
+      },
+      {
+       "x": 1787,
+       "y": 785
+      },
+      {
+       "x": 1715,
+       "y": 720
+      },
+      {
+       "x": 1745,
+       "y": 640
+      },
+      {
+       "x": 1721,
+       "y": 562
+      },
+      {
+       "x": 1800,
+       "y": 507
+      },
+      {
+       "x": 1894,
+       "y": 467
+      },
+      {
+       "x": 2011,
+       "y": 450
+      },
+      {
+       "x": 2123,
+       "y": 486
+      },
+      {
+       "x": 2160,
+       "y": 568
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Glass Ridge"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "brute, cultist, cultist, brute, ghoul, cultist"
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "heart",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polygon": [
+      {
+       "x": 1158,
+       "y": 560
+      },
+      {
+       "x": 1127,
+       "y": 681
+      },
+      {
+       "x": 1041,
+       "y": 787
+      },
+      {
+       "x": 890,
+       "y": 810
+      },
+      {
+       "x": 752,
+       "y": 805
+      },
+      {
+       "x": 604,
+       "y": 782
+      },
+      {
+       "x": 531,
+       "y": 674
+      },
+      {
+       "x": 497,
+       "y": 560
+      },
+      {
+       "x": 508,
+       "y": 437
+      },
+      {
+       "x": 625,
+       "y": 360
+      },
+      {
+       "x": 742,
+       "y": 280
+      },
+      {
+       "x": 893,
+       "y": 297
+      },
+      {
+       "x": 1012,
+       "y": 363
+      },
+      {
+       "x": 1137,
+       "y": 435
+      }
+     ],
+     "properties": [
+      {
+       "name": "title",
+       "type": "string",
+       "value": "The Heart of the Mere"
+      },
+      {
+       "name": "enemies",
+       "type": "string",
+       "value": "shadow_moth@hollowmoth"
+      },
+      {
+       "name": "boss",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "seal",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "final",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "floor",
+       "type": "string",
+       "value": "bones"
+      },
+      {
+       "name": "boss_title",
+       "type": "string",
+       "value": "THE HOLLOWMOTH"
+      },
+      {
+       "name": "boss_sub",
+       "type": "string",
+       "value": "It ate the moon. It ate Nana. It is still hungry."
+      },
+      {
+       "name": "intro",
+       "type": "string",
+       "value": "hollow_intro"
+      },
+      {
+       "name": "dead",
+       "type": "string",
+       "value": "hollow_dead"
+      },
+      {
+       "name": "victory",
+       "type": "string",
+       "value": "The Hollowmoth is gone. The stars are free."
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#7fc97f"
+  },
+  {
+   "id": 3,
+   "name": "roads",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 9,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 560,
+       "y": 1910
+      },
+      {
+       "x": 700,
+       "y": 1830
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1215,
+       "y": 1790
+      },
+      {
+       "x": 1290,
+       "y": 1880
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1730,
+       "y": 1900
+      },
+      {
+       "x": 1960,
+       "y": 1880
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 12,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 2440,
+       "y": 1930
+      },
+      {
+       "x": 2600,
+       "y": 1990
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 66.0
+      }
+     ]
+    },
+    {
+     "id": 13,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 2250,
+       "y": 1650
+      },
+      {
+       "x": 2450,
+       "y": 1310
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 76.0
+      }
+     ]
+    },
+    {
+     "id": 14,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 2320,
+       "y": 1040
+      },
+      {
+       "x": 2040,
+       "y": 720
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 70.0
+      }
+     ]
+    },
+    {
+     "id": 15,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1780,
+       "y": 665
+      },
+      {
+       "x": 1100,
+       "y": 600
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    },
+    {
+     "id": 16,
+     "name": "road",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 930,
+       "y": 1520
+      },
+      {
+       "x": 900,
+       "y": 1200
+      },
+      {
+       "x": 860,
+       "y": 830
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 60.0
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#c9a26b"
+  },
+  {
+   "id": 4,
+   "name": "water",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 17,
+     "name": "water",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 1250,
+       "y": -40
+      },
+      {
+       "x": 1310,
+       "y": 480
+      },
+      {
+       "x": 1460,
+       "y": 980
+      },
+      {
+       "x": 1800,
+       "y": 1340
+      },
+      {
+       "x": 2400,
+       "y": 1480
+      },
+      {
+       "x": 3240,
+       "y": 1440
+      }
+     ],
+     "properties": [
+      {
+       "name": "width",
+       "type": "float",
+       "value": 80.0
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#4f8fd6"
+  },
+  {
+   "id": 5,
+   "name": "crossings",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 18,
+     "name": "bridge",
+     "type": "bridge",
+     "rotation": 0,
+     "visible": true,
+     "x": 2356,
+     "y": 1470,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 19,
+     "name": "bridge",
+     "type": "bridge",
+     "rotation": 0,
+     "visible": true,
+     "x": 1353,
+     "y": 624,
+     "width": 0,
+     "height": 0,
+     "point": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#e0d070"
+  },
+  {
+   "id": 6,
+   "name": "markers",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 20,
+     "name": "shrine",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 350,
+     "y": 1930,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 21,
+     "name": "campfire",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 450,
+     "y": 2020,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 22,
+     "name": "rift",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 270,
+     "y": 2030,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 23,
+     "name": "gate",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 900,
+     "y": 1200,
+     "width": 0,
+     "height": 0,
+     "point": true,
+     "properties": [
+      {
+       "name": "open_from",
+       "type": "string",
+       "value": "0,-1"
+      }
+     ]
+    },
+    {
+     "id": 24,
+     "name": "route",
+     "type": "",
+     "rotation": 0,
+     "visible": true,
+     "x": 0,
+     "y": 0,
+     "width": 0,
+     "height": 0,
+     "polyline": [
+      {
+       "x": 400,
+       "y": 1960
+      },
+      {
+       "x": 560,
+       "y": 1910
+      },
+      {
+       "x": 700,
+       "y": 1830
+      },
+      {
+       "x": 950,
+       "y": 1720
+      },
+      {
+       "x": 1215,
+       "y": 1790
+      },
+      {
+       "x": 1290,
+       "y": 1880
+      },
+      {
+       "x": 1500,
+       "y": 1920
+      },
+      {
+       "x": 1730,
+       "y": 1900
+      },
+      {
+       "x": 1960,
+       "y": 1880
+      },
+      {
+       "x": 2200,
+       "y": 1850
+      },
+      {
+       "x": 2440,
+       "y": 1930
+      },
+      {
+       "x": 2600,
+       "y": 1990
+      },
+      {
+       "x": 2780,
+       "y": 2020
+      },
+      {
+       "x": 2440,
+       "y": 1930
+      },
+      {
+       "x": 2250,
+       "y": 1650
+      },
+      {
+       "x": 2356,
+       "y": 1470
+      },
+      {
+       "x": 2450,
+       "y": 1310
+      },
+      {
+       "x": 2560,
+       "y": 1100
+      },
+      {
+       "x": 2320,
+       "y": 1040
+      },
+      {
+       "x": 2040,
+       "y": 720
+      },
+      {
+       "x": 1950,
+       "y": 640
+      },
+      {
+       "x": 1780,
+       "y": 665
+      },
+      {
+       "x": 1353,
+       "y": 624
+      },
+      {
+       "x": 1100,
+       "y": 600
+      },
+      {
+       "x": 820,
+       "y": 560
+      }
+     ]
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#ff7070"
+  },
+  {
+   "id": 7,
+   "name": "props",
+   "type": "objectgroup",
+   "draworder": "topdown",
+   "objects": [
+    {
+     "id": 25,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1320,
+     "y": 1800,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 26,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1680,
+     "y": 1800,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 27,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1320,
+     "y": 2050,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 28,
+     "name": "",
+     "type": "brazier",
+     "rotation": 0,
+     "visible": true,
+     "x": 1680,
+     "y": 2050,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 29,
+     "name": "",
+     "type": "ruin_wall_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1360,
+     "y": 2080,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 30,
+     "name": "",
+     "type": "ruin_wall_2",
+     "rotation": 0,
+     "visible": true,
+     "x": 1640,
+     "y": 2082,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 31,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 1500,
+     "y": 1770,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 32,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2756.0133155682483,
+     "y": 1139.8003996192592,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 33,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2684.614474316427,
+     "y": 1227.324628466694,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 34,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2554.9071355963347,
+     "y": 1259.9513597365603,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 35,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2427.5828047316004,
+     "y": 1222.4141832619596,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 36,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2362.217951186149,
+     "y": 1132.2771610946047,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 37,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2389.3975163833256,
+     "y": 1031.7164076680172,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 38,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2496.4038797001513,
+     "y": 967.7854171187813,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 39,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2633.167574497424,
+     "y": 970.398210438701,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 40,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 2735.6953480203397,
+     "y": 1038.3322325954227,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 41,
+     "name": "",
+     "type": "moth_shrine",
+     "rotation": 0,
+     "visible": true,
+     "x": 2560,
+     "y": 1040,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 42,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1050.2652485007213,
+     "y": 647.8836684617302,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 43,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 887.453154195813,
+     "y": 762.5825694941859,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 44,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 673.8474589878668,
+     "y": 732.2628677290215,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 45,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 570.2976081305764,
+     "y": 579.755917004609,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 46,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 654.7787513514955,
+     "y": 419.9025617912864,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 47,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 863.6748647040065,
+     "y": 373.0756389788823,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 48,
+     "name": "",
+     "type": "standing_stone",
+     "rotation": 0,
+     "visible": true,
+     "x": 1039.6829141295204,
+     "y": 474.5367765402849,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 49,
+     "name": "",
+     "type": "ruin_wall_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 640,
+     "y": 360,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 50,
+     "name": "",
+     "type": "ruin_wall_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1000,
+     "y": 360,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 51,
+     "name": "",
+     "type": "moth_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 760,
+     "y": 520,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 52,
+     "name": "",
+     "type": "moth_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 900,
+     "y": 600,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 53,
+     "name": "",
+     "type": "moth_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 820,
+     "y": 680,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 54,
+     "name": "",
+     "type": "pine_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 2100,
+     "y": 560,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 55,
+     "name": "",
+     "type": "rock_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 1820,
+     "y": 720,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 56,
+     "name": "",
+     "type": "gibbet",
+     "rotation": 0,
+     "visible": true,
+     "x": 2650,
+     "y": 2000,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 57,
+     "name": "",
+     "type": "bones",
+     "rotation": 0,
+     "visible": true,
+     "x": 2850,
+     "y": 2060,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 58,
+     "name": "",
+     "type": "corpse_0",
+     "rotation": 0,
+     "visible": true,
+     "x": 980,
+     "y": 1660,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 59,
+     "name": "",
+     "type": "rock_1",
+     "rotation": 0,
+     "visible": true,
+     "x": 300,
+     "y": 1880,
+     "width": 0,
+     "height": 0,
+     "point": true
+    },
+    {
+     "id": 60,
+     "name": "",
+     "type": "rock_2",
+     "rotation": 0,
+     "visible": true,
+     "x": 520,
+     "y": 2060,
+     "width": 0,
+     "height": 0,
+     "point": true
+    }
+   ],
+   "opacity": 1,
+   "visible": true,
+   "x": 0,
+   "y": 0,
+   "color": "#c080ff"
+  }
+ ]
+}

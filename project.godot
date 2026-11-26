@@ -1,0 +1,65 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hollowmoth Prototype"
+config/description="Combat prototype: slow soulslike Hades with a PF1e ruleset. By DorkTeach."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7")
+
+[autoload]
+
+Rules="*res://scripts/rules.gd"
+Art="*res://scripts/art.gd"
+Items="*res://scripts/items.gd"
+Settings="*res://scripts/settings.gd"
+JuiceLite="*res://addons/sprite_juice_lite/juice_lite.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Sfx="*res://scripts/audio.gd"
+Run="*res://scripts/run.gd"
+BeehaveGlobalMetrics="*res://addons/beehave/metrics/beehave_global_metrics.gd"
+BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/mode=3
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sprite_juice_lite/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/beehave/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialogue/party.dialogue")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.03, 0.025, 0.03, 1)
+
+[debug]
+
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/shadowed_variable=0
+gdscript/warnings/shadowed_variable_base_class=0
+gdscript/warnings/integer_division=0
+gdscript/warnings/incompatible_ternary=0
+gdscript/warnings/int_as_enum_without_cast=0
+gdscript/warnings/missing_tool=0

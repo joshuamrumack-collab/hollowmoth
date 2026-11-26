@@ -1,0 +1,620 @@
+# Hollowmoth party banter (Dialogue Manager 4 syntax).
+# Lines whose speaker is dead or missing are skipped by scripts/banter.gd.
+# Speakers: Average, Puck, Nana, Brokk, Eowilas
+
+~ encounter_average
+% Average: LOOK AT ME! Over here! I'm the big one!
+% Average: Finally! Something worth hitting!
+% Average: Watch this. Everybody watch this.
+% Average: Line up, I've got one axe and all night.
+=> END
+
+~ encounter_puck
+% Puck: Oh, hey. Company. Not the good kind.
+% Puck: Easy, everyone. Deep breaths. Then stab.
+% Puck: Nana, you seeing this? ...Yeah, me neither, kind of blurry.
+% Nana: Mind your footing, sweetheart. And your manners.
+=> END
+
+~ encounter_brokk
+% Brokk: Another lot for the book. I've got ink to spare.
+% Brokk: Stand still so I can shoot you, you hollow wretches.
+% Brokk: Oi! Big lad! Don't get in my line again.
+% Brokk: Right. Count 'em. I want credit for every one.
+=> END
+
+~ encounter_sael
+% Eowilas: No chains on you tonight, but no mercy either.
+% Eowilas: Black Butterfly, guide my hand. It needs guiding.
+% Eowilas: Stay close. I can't mend what I can't reach.
+% Eowilas: They were people once. Let's end it quickly.
+=> END
+
+~ clear_average
+% Average: Did everyone see that? Tell me someone saw that.
+% Average: Ha! Too easy. Bring a bigger one.
+% Average: I'm not even tired. Slightly tired. Not really.
+=> END
+
+~ clear_puck
+% Puck: Cool. Cool cool cool. We're alive.
+% Puck: Somebody check their pockets for snacks.
+% Nana: That's my boy. Now eat something, you're all bones.
+=> END
+
+~ clear_brokk
+% Brokk: Seven for me. Don't argue, I counted.
+% Brokk: Sloppy. All of you. Including me. Mostly you.
+% Brokk: Into the book you go. Page forty-two.
+=> END
+
+~ clear_sael
+% Eowilas: Rest now. Whatever bound you is broken.
+% Eowilas: Anyone bleeding? Speak up, pride heals slower than skin.
+% Eowilas: The moths will carry them off. Let's keep moving.
+=> END
+
+~ lowhp_average
+% Average: That one... counted. Only a bit.
+% Average: I'm FINE. This is how I look when I'm winning.
+=> END
+
+~ lowhp_puck
+% Puck: Ow. Okay. Okay, that one was real.
+% Nana: Puck! Drink something this instant!
+=> END
+
+~ lowhp_brokk
+% Brokk: Agh! Write that down, someone. In red.
+% Brokk: I'll be adding you to the book, sunshine.
+=> END
+
+~ lowhp_sael
+% Eowilas: I'm hurt. Someone cover me while I pray.
+% Eowilas: Not yet. The Butterfly isn't done with me.
+=> END
+
+~ revived_average
+% Average: I wasn't dead. I was resting dramatically.
+=> END
+
+~ revived_puck
+% Puck: Whoa. Saw a big moth. It said hi.
+% Nana: Don't you ever scare me like that again.
+=> END
+
+~ revived_brokk
+% Brokk: Nobody saw that. That goes nowhere near the book.
+=> END
+
+~ revived_sael
+% Eowilas: Thank you. I owe you a sunrise.
+=> END
+
+~ levelup
+% Average: I feel BIGGER. Can you tell? You can tell.
+% Brokk: Stronger. Still surrounded by amateurs, but stronger.
+% Eowilas: The shrine's light remembers us. Good.
+% Puck: Huh. I feel... wiser? Or hungrier. One of those.
+=> END
+
+~ rest
+% => rest_1
+% => rest_2
+% => rest_3
+% => rest_4
+
+~ rest_1
+Puck: Anyone want some Dreamleaf? For the nerves.
+Brokk: My nerves are fine. It's my patience that's dying.
+Nana: Brokk, dear, have you eaten today?
+Brokk: ...No.
+Nana: I knew it.
+=> END
+
+~ rest_2
+Eowilas: The cultists say the moth god wants us to kneel.
+Average: I don't kneel. I flex.
+Eowilas: That's... actually not the worst answer.
+=> END
+
+~ rest_3
+Average: Brokk. Honest question. Am I in the book?
+Brokk: Page one, lad. "Breathes too loud."
+Average: Page ONE? I'm FIRST!
+Brokk: That's not how... never mind.
+=> END
+
+~ rest_4
+Puck: Nana, do ghosts sleep?
+Nana: I nap, dear. In your left ear, mostly.
+Puck: That explains the humming.
+=> END
+
+~ banter
+% => banter_1
+% => banter_2
+% => banter_3
+% => banter_4
+% => banter_5
+% => banter_6
+% => banter_7
+% => banter_8
+% => banter_9
+% => banter_10
+% => banter_11
+% => banter_12
+% => banter_13
+% => banter_14
+% => banter_15
+% => banter_16
+
+~ banter_1
+Brokk: Elf. Your moth keeps landing on my beard.
+Eowilas: She likes you.
+Brokk: Well, I don't like her. ...She can stay.
+=> END
+
+~ banter_2
+Average: Puck, how are you not scared of anything?
+Puck: Fear's just your body being dramatic, man.
+Nana: He fell out of a tree at six and laughed the whole way down.
+=> END
+
+~ banter_3
+Eowilas: Brokk, why do you keep a book of grudges?
+Brokk: Because if I kept them in my head there'd be no room for anything else.
+=> END
+
+~ banter_4
+Average: When this is over, they'll carve a statue of me.
+Brokk: They'll carve a warning.
+Average: Same thing, if it's big enough.
+=> END
+
+~ banter_5
+Puck: This forest smells like wet regret.
+Eowilas: That's the gibbets.
+Puck: Yeah. That's what I said.
+=> END
+
+~ banter_6
+Nana: Eowilas, dear, you stand like someone who's been in chains.
+Eowilas: I was. Once.
+Nana: Well, you're not now. Shoulders back.
+=> END
+
+~ banter_7
+Brokk: Barbarian. You're walking on my side of the road.
+Average: Roads have sides?
+Brokk: They do when I'm on them.
+=> END
+
+~ banter_8
+Puck: Do you think the stars mind going out?
+Eowilas: I think someone is putting them out. That's different.
+Puck: Heavy. Okay. Walking quietly now.
+=> END
+
+~ banter_9
+Average: Eowilas. Pray for me to get bigger.
+Eowilas: She doesn't take requests about muscles.
+Average: Then what's the point of her?
+Eowilas: Freedom, Average. Even yours.
+=> END
+
+~ banter_10
+Brokk: Page eleven. The rain. Page twelve: the mud. Page thirteen: Average.
+Average: I got a whole page?
+Brokk: You've got a chapter.
+=> END
+
+~ banter_11
+Eowilas: When I was a slave, I counted the bars every night.
+Brokk: How many?
+Eowilas: Nine. Now I count stars instead. Fewer every night.
+Brokk: ...I'll add whoever's doing it to the book.
+=> END
+
+~ banter_12
+Average: My father fought the Iron Brother three times.
+Puck: And?
+Average: He lost three times. But he looked AMAZING doing it.
+=> END
+
+~ banter_13
+Brokk: Arcane archery is a science, barbarian. Angles. Wind. Hatred.
+Average: Mine is a science too. Hit. Hit again.
+Brokk: That's not a science, that's a weather pattern.
+=> END
+
+~ banter_14
+Eowilas: Average, you take every blow meant for us. Why?
+Average: Because when they hit me, they're LOOKING at me.
+Eowilas: ...That's almost noble.
+Average: It's completely noble.
+=> END
+
+~ banter_15
+Brokk: Elf. Do you ever stop smiling?
+Eowilas: I spent years not being allowed to. I'm catching up.
+Brokk: Hmph. Carry on, then.
+=> END
+
+~ banter_16
+Puck: Brokk, is there anyone NOT in your book?
+Brokk: Nana.
+Nana: Oh, Brokk. That's lovely.
+Brokk: She's in the other book.
+=> END
+
+~ banter_act2
+% => banter2_1
+% => banter2_2
+% => banter2_3
+% => banter2_4
+% => banter2_5
+% => banter2_6
+
+~ banter2_1
+Average: The ground is hot. My feet are hot. I'm sweating heroically.
+Brokk: You're sweating loudly.
+=> END
+
+~ banter2_2
+Eowilas: These chains in the ash... they go on for miles.
+Brokk: Someone forged all this. Someone very patient and very stupid.
+Eowilas: We'll break them. Every one.
+=> END
+
+~ banter2_3
+Puck: Ash tastes like burnt toast, if the toast was sad.
+Nana: Don't lick the ground, sweetheart.
+Puck: I didn't. Not on purpose.
+=> END
+
+~ banter2_4
+Brokk: Dragon. A real dragon. I've got one page left in this book.
+Average: Save it for me, when I win.
+Brokk: It's for the dragon. You'll get a footnote.
+=> END
+
+~ banter2_5
+Average: If I die out here, tell them I was huge.
+Eowilas: You won't die. I won't let you.
+Average: ...Tell them anyway.
+=> END
+
+~ banter2_6
+Eowilas: There were moths here once. Thousands. Free things.
+Puck: Gary says hi.
+Eowilas: Hello, Gary.
+=> END
+
+~ crit_average
+% Average: DID YOU SEE THAT?
+% Average: That one's going on my statue.
+% Average: Ha! LOOK AT ME!
+% Average: Somebody write that down! Brokk! Write it down!
+=> END
+
+~ crit_brokk
+% Brokk: Right between the grudges.
+% Brokk: Science.
+% Brokk: And THAT is why you measure the wind.
+=> END
+
+~ crit_sael
+% Eowilas: Forgive me. That one wasn't gentle.
+% Eowilas: Freedom bites sometimes.
+=> END
+
+~ crit_puck
+% Puck: Whoa. Didn't even aim.
+% Nana: Lovely form, dear!
+=> END
+
+~ healed_average
+% Average: I didn't need that. Do it again.
+% Average: Thanks, priestess. I was winning anyway.
+=> END
+
+~ healed_brokk
+% Brokk: Hmph. Fine. You're out of the book. For today.
+% Brokk: I'll pay you back. Probably.
+=> END
+
+~ healed_puck
+% Puck: Ooh, tingly. Thanks, Eowilas.
+=> END
+
+~ idle_average
+% Average: *flexes* Just in case anything's watching.
+% Average: Anyone want to arm wrestle? Anyone? Puck?
+% Average: Stand still too long and I start to shrink.
+% Average: I'm getting bigger. I can feel it.
+=> END
+
+~ idle_brokk
+% Brokk: *scribbles* ...the squelching. Page fifty-three.
+% Brokk: *scribbles* ...the barbarian's humming. Page fifty-four.
+% Brokk: Are we going, or are we growing roots?
+% Brokk: *counts arrows* ...someone's been in my quiver.
+=> END
+
+~ idle_sael
+% Eowilas: *kneels* Black Butterfly, keep them free a little longer.
+% Eowilas: *kneels* For the ones still in chains, wherever they are.
+% Eowilas: Listen. Even the wind here is caged.
+=> END
+
+~ idle_puck
+% Puck: *lights pipe* Just a little something for the nerves.
+% Nana: Puck. Pipe. Away. ...Oh, fine, one puff.
+=> END
+
+~ kill_steal_average
+% Average: HEY! That one was MINE!
+% Average: I was about to hit that!
+% Average: Stop killing my things!
+=> END
+
+~ intro
+Narrator: The Hollowmarch. Three nights since the last star went dark above the old road.
+Narrator: Four strangers share a dying fire at the forest's edge.
+Brokk: Right. Ground rules. Nobody touches my arrows. Nobody touches my book.
+Average: What about your beard?
+Brokk: ESPECIALLY not the beard.
+Puck: Guys. Look up. There's, like... a hole where the moon goes.
+Eowilas: The cult of the Hollow Moth. They're snuffing out the stars, one shrine at a time.
+Nana: And you four are going to stop them. I've decided.
+Puck: Nana's decided. That's binding, legally.
+- Then we go together.
+	Average: Together! Behind me. Mostly behind me.
+- Who leads?
+	Eowilas: Whoever walks first. The rest of us follow, and keep them alive.
+	Brokk: Mostly alive.
+Narrator: Somewhere past the gallows, a bell tolls with no one to ring it.
+=> END
+
+~ boss_intro
+Narrator: The pit stinks of rust and old fire. Something huge unfolds from the ash.
+Brokk: That's a lot of armour for one skeleton.
+Average: Finally. Someone my size.
+Eowilas: Careful. There's a soul burning inside him, chained to the iron.
+Nana: Puck, sweetheart, stay behind the big one.
+Puck: Always do, Nana.
+=> END
+
+~ boss_dead
+Narrator: The Iron Brother sinks to his knees. The fire in his joints gutters out.
+Eowilas: Whoever you were... you're free now.
+Average: I WON! ...We won. Mostly me.
+Brokk: Iron Brother. Page one. Crossed out.
+Puck: Hey. Hey, look up. A star just came back.
+=> END
+
+~ shrine_first
+Nana: Oh, a Moth Shrine. Come here, all of you. Let me look at you.
+Nana: You're tired, you're filthy and someone is bleeding on my good ghost-shawl.
+- Rest here, Nana. We need it.
+	Nana: Good. Sit. The moths will keep watch.
+- We can't stop. The stars are going out.
+	Nana: And they'll still be going out after you've had a sit-down.
+Eowilas: She's right. The shrine will remember us if we fall.
+Puck: Wait, so if we die we come back here?
+Brokk: Hope you like this view. You'll see it a lot.
+=> END
+
+~ rift_enter
+Narrator: The rift hums. Beyond it, ash falls upward into a red sky.
+Eowilas: That's where the stars went. I can feel them, behind the smoke.
+Brokk: Of course it's on fire. It's always on fire.
+Puck: Nana, are you coming?
+Nana: Sweetheart, I'm dead. I go where I please.
+- Step through.
+	Average: ME FIRST.
+- One last look back.
+	Puck: Bye, nice gloomy forest. You were the good kind of gloomy.
+	Average: ME FIRST.
+=> END
+
+~ act2_intro
+Narrator: The Cinderveil. A land where the sky burned down and nobody swept up.
+Brokk: Smells like my uncle's forge. Before the fire. And after the fire.
+Eowilas: The Iron Brother wasn't the master here. He was the jailer.
+Average: Then who's the prisoner?
+Narrator: Far to the north, something enormous rattles its chains.
+Puck: ...Was that thunder?
+Nana: That, my darling, was breathing.
+- Then we find it.
+	Eowilas: Carefully. Three wardens hold this place. Two of them still guard the way.
+- Maybe we go back?
+	Brokk: The rift closed behind us. I checked. Twice.
+Puck: Okay. Shrine first. Shrine is always first.
+=> END
+
+~ wraith_intro
+Narrator: Broken mirrors line the hall. Every shard shows a face that isn't yours.
+Puck: Uh. Why am I old in that one?
+Narrator: A pale woman steps out of the glass. She is weeping.
+Eowilas: A mourner. She lost her own face and keeps stealing others.
+Average: She can have mine. It's the best one.
+Brokk: Mirrors lie. Hit the one that bleeds.
+=> END
+
+~ wraith_dead
+Narrator: The Glass Mourner shatters. For a moment every mirror shows her as she was: smiling.
+Eowilas: Rest now. Your face is your own again.
+Puck: That was the saddest fight I've ever won.
+Brokk: Glass Mourner. Crossed out. ...Gently.
+=> END
+
+~ moth_intro
+Narrator: The grove is silent. Then every dead branch takes flight.
+Eowilas: No. Oh, no. That's her shadow. The Black Butterfly's own shadow.
+Puck: Your goddess has a shadow? Does she know?
+Eowilas: She let it go so she could be free. Someone caught it and made it hungry.
+Nana: Breathe through your sleeves, children. That dust is nasty.
+Average: I will punch the dust.
+=> END
+
+~ moth_dead
+Narrator: The great dark wings come apart into a thousand small moths. They are only moths now.
+Eowilas: Go on. You're free. Find her again.
+Puck: One of them landed on me. I'm keeping him. His name is Gary.
+Brokk: You are not keeping a moth.
+Puck: Gary stays.
+=> END
+
+~ dragon_intro
+Narrator: The throne is a mountain of bones. Chains as thick as trees run up into the smoke.
+Narrator: At the top, a dragon lifts its head. Its ribs glow like a furnace.
+Brokk: That. That is page one. That has always been page one.
+Average: My father told stories about a dragon on a chain. I thought he made it up.
+Eowilas: Ashmaw. It's been eating the stars to stay warm.
+Nana: Well. Somebody tell it dinner's over.
+Puck: Not it.
+=> END
+
+~ dragon_dead
+Narrator: Ashmaw falls. The chains go slack and ring like bells, one last time.
+Narrator: Out of its burning chest, the lost stars rise. One. Then hundreds.
+Puck: Guys. Guys, look up.
+Average: I killed a DRAGON. Dad. DAD. Did you see that?
+Brokk: Ashmaw. Crossed out. ...I need a new book.
+Eowilas: The night is whole again. She would be proud of you. All of you.
+=> END
+
+~ rift_enter_2
+Narrator: The second rift is cold. Frost creeps out of it and over the ash.
+Eowilas: The stars Ashmaw freed... they didn't go home. Something called them down.
+Brokk: Something worse than a dragon. Wonderful. I'll need a bigger book.
+Nana: I know that cold. I felt it once. Right at the very end.
+Puck: Nana? What do you mean, the end?
+Nana: Walk, sweetheart. I'll tell you on the other side.
+- Step through.
+	Average: ME FIRST. Again.
+- Hold Nana's hand.
+	Puck: You're freezing.
+	Nana: I'm dead, darling. But thank you.
+=> END
+
+~ act3_intro
+Narrator: The Starfall Mere. A frozen lake under a black sky, and in the ice, every fallen star.
+Puck: They're trapped. All of them. Like flies in honey.
+Eowilas: Not trapped. Stored. Something is keeping them for later.
+Nana: The Hollowmoth. It eats light. It ate the lamps of our village, then the moon over it.
+Nana: Then it ate me. I went out like a candle, and woke up beside a little elf who wouldn't stop crying.
+Puck: ...You never told me that.
+Nana: You never needed to know. Now you do.
+Average: Then I will punch it TWICE. Once for the stars. Once for Nana.
+Brokk: Pages one, two and three. Page four is blank. I've been saving it.
+- Then we end it.
+	Eowilas: The Lantern Warden guards the shore. The Pale Choir sings it to sleep. Then the Hollowmoth.
+- Is everyone ready?
+	Puck: No. Let's go anyway.
+=> END
+
+~ banter_act3
+% => banter3_1
+% => banter3_2
+% => banter3_3
+% => banter3_4
+% => banter3_5
+% => banter3_6
+
+~ banter3_1
+Average: The ice is cracking under me. I'm too heroic for this lake.
+Brokk: You're too heavy for this lake.
+=> END
+
+~ banter3_2
+Puck: There's a star under my feet. It's blinking at me.
+Eowilas: It knows you. Every star knows a little of everyone.
+Puck: Hi, star. I'll get you out. Promise.
+=> END
+
+~ banter3_3
+Brokk: My beard has frozen solid. I could chop wood with it.
+Average: Can I try?
+Brokk: No.
+=> END
+
+~ banter3_4
+Nana: When I was alive, I used to skate on a lake like this.
+Puck: Were you good at it?
+Nana: Terrible. Your grandfather married me anyway.
+=> END
+
+~ banter3_5
+Eowilas: Black Butterfly, if you're listening, we could use a little light.
+Narrator: A single moth lands on her shoulder. It glows, faintly.
+Puck: ...Is that Gary?
+=> END
+
+~ banter3_6
+Average: After this, I want soup. Hot soup. A whole bucket.
+Brokk: For once, lad, I agree with every word.
+=> END
+
+~ warden_intro
+Narrator: A giant in rusted armour stands on the shore, holding a lantern full of stolen starlight.
+Average: He looks like... no. It can't be.
+Brokk: The Iron Brother had a brother. Of course he did. Families are always the worst.
+Eowilas: The Lantern Warden. He feeds the Hollowmoth one star at a time.
+Average: Then let's put out his lantern.
+=> END
+
+~ warden_dead
+Narrator: The lantern cracks. A single star floats free and hangs over the lake like a little moon.
+Puck: One down. About a million to go.
+Brokk: Lantern Warden. Crossed out. In ink, this time.
+=> END
+
+~ choir_intro
+Narrator: Pale figures stand in a ring on the ice. They are singing, and the song is a lullaby.
+Puck: I'm... so... sleepy...
+Nana: PUCK. Bite your tongue. Not literally. Well, a little bit literally.
+Eowilas: The Pale Choir. They sing the stars to sleep so they don't fight back.
+Average: I can't sing. But I can shout. AAAAAAH!
+=> END
+
+~ choir_dead
+Narrator: The song breaks off mid-note. Under the ice, the stars begin to stir.
+Eowilas: They're waking up. They can hear us now.
+Puck: I'm awake too. Mostly.
+Brokk: Choir. Crossed out. Worst concert of my life.
+=> END
+
+~ hollow_intro
+Narrator: At the centre of the Mere the ice is gone. Something rises out of the black water.
+Narrator: Wings as wide as a church. Where its face should be, there is only a hole full of night.
+Nana: There you are. You took my lamp. You took my moon. You took me.
+Puck: You don't get to take anything else.
+Eowilas: Black Butterfly, this is the shadow you lost. Let us bring it home.
+Brokk: Page four.
+Average: FOR NANA!
+=> END
+
+~ hollow_dead
+Narrator: The Hollowmoth tears open. Every star it swallowed pours out at once.
+Narrator: The ice shatters. The Mere fills with light, and the light rises.
+Puck: Nana... Nana, you're glowing.
+Nana: I know, sweetheart. It gave back everything it took. Even me. A little.
+Brokk: The Hollowmoth. Crossed out. ...Book's full. Good.
+Average: Did we win? We won. I'm going to cry. Heroically.
+=> END
+
+~ ending
+Nana: Look at my four. Frozen. Singed. Still standing.
+Nana: The stars are back where they belong, and so is my light. I can go now, if you'll let me.
+Puck: ...Will you come back?
+Nana: Look up on a clear night. Find the one that's blinking at you. That's me, telling you to eat properly.
+Eowilas: Go in peace, Nana. The Black Butterfly will carry you.
+Average: Bye, Nana. Thank you for the shouting.
+Brokk: There's a page for you, you know. In the other book. It just says "Nana. Kept us alive."
+Narrator: And beneath a sky full of stars, one brighter than the rest, the party walked home.
+Narrator: THE END.
+Narrator: A game by DorkTeach.
+=> END

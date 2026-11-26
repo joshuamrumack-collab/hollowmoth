@@ -1,0 +1,920 @@
+{
+ "characters": {
+  "sael": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_sael_idle",
+     "foot": [
+      51.0,
+      126.0
+     ],
+     "w": 105,
+     "h": 132,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_sael_walk0",
+     "foot": [
+      66.0,
+      116.0
+     ],
+     "w": 95,
+     "h": 122,
+     "faces": -1
+    },
+    "back": {
+     "tex": "hd_sael_back",
+     "foot": [
+      49.0,
+      127.0
+     ],
+     "w": 109,
+     "h": 133,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_sael_strike",
+     "foot": [
+      62.0,
+      145.0
+     ],
+     "w": 101,
+     "h": 151,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_sael_strike",
+     "foot": [
+      62.0,
+      145.0
+     ],
+     "w": 101,
+     "h": 151,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_sael_hurt",
+     "foot": [
+      59.0,
+      122.0
+     ],
+     "w": 131,
+     "h": 128,
+     "faces": 1
+    },
+    "dodge": {
+     "tex": "hd_sael_dodge",
+     "foot": [
+      66.0,
+      102.0
+     ],
+     "w": 116,
+     "h": 108,
+     "faces": 1
+    },
+    "drink": {
+     "tex": "hd_sael_drink",
+     "foot": [
+      58.0,
+      99.0
+     ],
+     "w": 111,
+     "h": 105,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_sael_dead",
+     "foot": [
+      75.0,
+      73.0
+     ],
+     "w": 140,
+     "h": 79,
+     "faces": 1
+    },
+    "walk1": {
+     "tex": "hd_sael_walk1",
+     "foot": [
+      31.5,
+      122.0
+     ],
+     "w": 88,
+     "h": 128,
+     "faces": -1
+    }
+   }
+  },
+  "puck": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_puck_idle",
+     "foot": [
+      54.0,
+      130.0
+     ],
+     "w": 107,
+     "h": 136,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_puck_walk0",
+     "foot": [
+      42.0,
+      127.0
+     ],
+     "w": 82,
+     "h": 133,
+     "faces": 1
+    },
+    "back": {
+     "tex": "hd_puck_back",
+     "foot": [
+      46.0,
+      127.0
+     ],
+     "w": 103,
+     "h": 133,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_puck_strike",
+     "foot": [
+      21.0,
+      116.0
+     ],
+     "w": 155,
+     "h": 122,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_puck_cast",
+     "foot": [
+      21.0,
+      116.0
+     ],
+     "w": 155,
+     "h": 122,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_puck_hurt",
+     "foot": [
+      61.0,
+      126.0
+     ],
+     "w": 115,
+     "h": 132,
+     "faces": 1
+    },
+    "dodge": {
+     "tex": "hd_puck_dodge",
+     "foot": [
+      60.0,
+      94.0
+     ],
+     "w": 132,
+     "h": 100,
+     "faces": 1
+    },
+    "drink": {
+     "tex": "hd_puck_drink",
+     "foot": [
+      44.0,
+      107.0
+     ],
+     "w": 105,
+     "h": 113,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_puck_dead",
+     "foot": [
+      78.5,
+      77.0
+     ],
+     "w": 145,
+     "h": 83,
+     "faces": 1
+    },
+    "walk1": {
+     "tex": "hd_puck_walk1",
+     "foot": [
+      66.0,
+      129.0
+     ],
+     "w": 87,
+     "h": 135,
+     "faces": 1
+    },
+    "run0": {
+     "tex": "hd_puck_run0",
+     "foot": [
+      35.0,
+      122.0
+     ],
+     "w": 113,
+     "h": 128,
+     "faces": 1
+    },
+    "run1": {
+     "tex": "hd_puck_run1",
+     "foot": [
+      97.0,
+      113.0
+     ],
+     "w": 118,
+     "h": 119,
+     "faces": 1
+    },
+    "windup": {
+     "tex": "hd_puck_windup",
+     "foot": [
+      22.0,
+      114.0
+     ],
+     "w": 97,
+     "h": 120,
+     "faces": 1
+    }
+   }
+  },
+  "average": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_average_idle",
+     "foot": [
+      51.0,
+      150.0
+     ],
+     "w": 141,
+     "h": 156,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_average_walk0",
+     "foot": [
+      67.0,
+      145.0
+     ],
+     "w": 128,
+     "h": 151,
+     "faces": 1
+    },
+    "back": {
+     "tex": "hd_average_back",
+     "foot": [
+      88.0,
+      152.0
+     ],
+     "w": 140,
+     "h": 158,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_average_strike",
+     "foot": [
+      19.0,
+      137.0
+     ],
+     "w": 132,
+     "h": 143,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_average_strike",
+     "foot": [
+      19.0,
+      137.0
+     ],
+     "w": 132,
+     "h": 143,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_average_hurt",
+     "foot": [
+      38.0,
+      146.0
+     ],
+     "w": 138,
+     "h": 152,
+     "faces": 1
+    },
+    "dodge": {
+     "tex": "hd_average_dodge",
+     "foot": [
+      69.0,
+      112.0
+     ],
+     "w": 151,
+     "h": 118,
+     "faces": 1
+    },
+    "drink": {
+     "tex": "hd_average_drink",
+     "foot": [
+      90.0,
+      128.0
+     ],
+     "w": 138,
+     "h": 134,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_average_dead",
+     "foot": [
+      114.0,
+      73.0
+     ],
+     "w": 158,
+     "h": 79,
+     "faces": 1
+    },
+    "windup": {
+     "tex": "hd_average_windup",
+     "foot": [
+      77.0,
+      126.0
+     ],
+     "w": 139,
+     "h": 132,
+     "faces": -1
+    }
+   }
+  },
+  "brokk": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_brokk_idle",
+     "foot": [
+      60.0,
+      118.0
+     ],
+     "w": 123,
+     "h": 124,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_brokk_walk0",
+     "foot": [
+      57.0,
+      113.0
+     ],
+     "w": 109,
+     "h": 119,
+     "faces": 1
+    },
+    "back": {
+     "tex": "hd_brokk_back",
+     "foot": [
+      66.0,
+      118.0
+     ],
+     "w": 113,
+     "h": 124,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_brokk_strike",
+     "foot": [
+      50.0,
+      115.0
+     ],
+     "w": 110,
+     "h": 121,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_brokk_strike",
+     "foot": [
+      50.0,
+      115.0
+     ],
+     "w": 110,
+     "h": 121,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_brokk_hurt",
+     "foot": [
+      73.0,
+      115.0
+     ],
+     "w": 124,
+     "h": 121,
+     "faces": 1
+    },
+    "dodge": {
+     "tex": "hd_brokk_dodge",
+     "foot": [
+      83.0,
+      114.0
+     ],
+     "w": 139,
+     "h": 120,
+     "faces": 1
+    },
+    "drink": {
+     "tex": "hd_brokk_drink",
+     "foot": [
+      39.5,
+      109.0
+     ],
+     "w": 112,
+     "h": 115,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_brokk_dead",
+     "foot": [
+      75.0,
+      76.0
+     ],
+     "w": 135,
+     "h": 82,
+     "faces": 1
+    }
+   }
+  },
+  "ghoul": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_ghoul_idle",
+     "foot": [
+      17.0,
+      98.0
+     ],
+     "w": 61,
+     "h": 104,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_ghoul_walk0",
+     "foot": [
+      35.0,
+      95.0
+     ],
+     "w": 63,
+     "h": 101,
+     "faces": 1
+    },
+    "walk1": {
+     "tex": "hd_ghoul_walk1",
+     "foot": [
+      30.0,
+      98.0
+     ],
+     "w": 61,
+     "h": 104,
+     "faces": 1
+    },
+    "walk2": {
+     "tex": "hd_ghoul_walk2",
+     "foot": [
+      36.0,
+      98.0
+     ],
+     "w": 66,
+     "h": 104,
+     "faces": 1
+    },
+    "windup": {
+     "tex": "hd_ghoul_windup",
+     "foot": [
+      33.0,
+      99.0
+     ],
+     "w": 78,
+     "h": 105,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_ghoul_strike",
+     "foot": [
+      47.0,
+      97.0
+     ],
+     "w": 93,
+     "h": 103,
+     "faces": 1
+    },
+    "fall": {
+     "tex": "hd_ghoul_fall",
+     "foot": [
+      39.0,
+      71.0
+     ],
+     "w": 67,
+     "h": 77,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_ghoul_dead",
+     "foot": [
+      59.0,
+      41.0
+     ],
+     "w": 92,
+     "h": 47,
+     "faces": 1
+    }
+   }
+  },
+  "brute": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_brute_idle",
+     "foot": [
+      80.0,
+      162.0
+     ],
+     "w": 154,
+     "h": 168,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_brute_walk0",
+     "foot": [
+      74.0,
+      162.0
+     ],
+     "w": 131,
+     "h": 168,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_brute_strike",
+     "foot": [
+      85.0,
+      162.0
+     ],
+     "w": 144,
+     "h": 168,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_brute_hurt",
+     "foot": [
+      50.0,
+      162.0
+     ],
+     "w": 151,
+     "h": 168,
+     "faces": 1
+    },
+    "fall": {
+     "tex": "hd_brute_fall",
+     "foot": [
+      76.0,
+      141.0
+     ],
+     "w": 127,
+     "h": 147,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_brute_dead",
+     "foot": [
+      114.5,
+      80.0
+     ],
+     "w": 176,
+     "h": 86,
+     "faces": 1
+    }
+   }
+  },
+  "iron_brother": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_iron_brother_idle",
+     "foot": [
+      105.0,
+      322.0
+     ],
+     "w": 299,
+     "h": 328,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_iron_brother_walk0",
+     "foot": [
+      44.0,
+      325.0
+     ],
+     "w": 173,
+     "h": 332,
+     "faces": 1
+    },
+    "walk1": {
+     "tex": "hd_iron_brother_walk1",
+     "foot": [
+      112.0,
+      319.0
+     ],
+     "w": 341,
+     "h": 325,
+     "faces": 1
+    },
+    "windup": {
+     "tex": "hd_iron_brother_windup",
+     "foot": [
+      112.0,
+      319.0
+     ],
+     "w": 341,
+     "h": 325,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_iron_brother_strike",
+     "foot": [
+      77.0,
+      337.0
+     ],
+     "w": 303,
+     "h": 343,
+     "faces": -1
+    },
+    "back": {
+     "tex": "hd_iron_brother_back",
+     "foot": [
+      172.0,
+      322.0
+     ],
+     "w": 253,
+     "h": 328,
+     "faces": 1
+    },
+    "slam": {
+     "tex": "hd_iron_brother_slam",
+     "foot": [
+      129.0,
+      291.0
+     ],
+     "w": 308,
+     "h": 297,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_iron_brother_hurt",
+     "foot": [
+      86.5,
+      253.0
+     ],
+     "w": 304,
+     "h": 259,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_iron_brother_dead",
+     "foot": [
+      133.5,
+      230.0
+     ],
+     "w": 322,
+     "h": 236,
+     "faces": 1
+    }
+   }
+  },
+  "mirror_wraith": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_mirror_wraith_idle",
+     "foot": [
+      80.0,
+      234.0
+     ],
+     "w": 179,
+     "h": 240,
+     "faces": 1
+    }
+   }
+  },
+  "shadow_moth": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_shadow_moth_idle",
+     "foot": [
+      45.0,
+      250.0
+     ],
+     "w": 264,
+     "h": 256,
+     "faces": 1
+    }
+   }
+  },
+  "dragon": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_dragon_idle",
+     "foot": [
+      276.0,
+      450.0
+     ],
+     "w": 480,
+     "h": 456,
+     "faces": 1
+    }
+   }
+  },
+  "moth_horror": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_moth_horror_idle",
+     "foot": [
+      56.0,
+      154.0
+     ],
+     "w": 113,
+     "h": 160,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_moth_horror_cast",
+     "foot": [
+      31.0,
+      149.0
+     ],
+     "w": 122,
+     "h": 155,
+     "faces": 1
+    },
+    "hurt": {
+     "tex": "hd_moth_horror_hurt",
+     "foot": [
+      90.0,
+      149.0
+     ],
+     "w": 139,
+     "h": 155,
+     "faces": 1
+    },
+    "dead": {
+     "tex": "hd_moth_horror_dead",
+     "foot": [
+      93.0,
+      98.0
+     ],
+     "w": 148,
+     "h": 104,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_moth_horror_cast",
+     "foot": [
+      31.0,
+      149.0
+     ],
+     "w": 122,
+     "h": 155,
+     "faces": 1
+    }
+   }
+  },
+  "cultist": {
+   "scale": 0.25,
+   "poses": {
+    "idle": {
+     "tex": "hd_cultist_idle",
+     "foot": [
+      54.0,
+      130.0
+     ],
+     "w": 116,
+     "h": 136,
+     "faces": 1
+    },
+    "walk0": {
+     "tex": "hd_cultist_walk0",
+     "foot": [
+      60.0,
+      133.0
+     ],
+     "w": 133,
+     "h": 139,
+     "faces": 1
+    },
+    "back": {
+     "tex": "hd_cultist_back",
+     "foot": [
+      36.0,
+      135.0
+     ],
+     "w": 115,
+     "h": 141,
+     "faces": 1
+    },
+    "cast": {
+     "tex": "hd_cultist_cast",
+     "foot": [
+      93.0,
+      151.0
+     ],
+     "w": 145,
+     "h": 157,
+     "faces": 1
+    },
+    "strike": {
+     "tex": "hd_cultist_cast",
+     "foot": [
+      93.0,
+      151.0
+     ],
+     "w": 145,
+     "h": 157,
+     "faces": 1
+    }
+   }
+  }
+ },
+ "portraits": {
+  "puck": "portrait_puck",
+  "sael": "portrait_sael",
+  "average": "portrait_average",
+  "brokk": "portrait_brokk"
+ },
+ "icons": [
+  "rapier",
+  "shuriken",
+  "grudge_book",
+  "dreamleaf",
+  "gigglecap",
+  "draught",
+  "rune",
+  "storm_quiver",
+  "greataxe"
+ ],
+ "props": {
+  "moth_shrine": {
+   "w": 166,
+   "h": 216
+  },
+  "gibbet": {
+   "w": 122,
+   "h": 208
+  },
+  "brazier": {
+   "w": 83,
+   "h": 104,
+   "frames": 3
+  },
+  "fern": {
+   "w": 89,
+   "h": 72
+  },
+  "rift": {
+   "w": 132,
+   "h": 232
+  },
+  "pine_0": {
+   "w": 261,
+   "h": 360
+  },
+  "pine_1": {
+   "w": 290,
+   "h": 400
+  },
+  "pine_2": {
+   "w": 325,
+   "h": 448
+  },
+  "pine_3": {
+   "w": 273,
+   "h": 376
+  },
+  "ruin_wall_0": {
+   "w": 240,
+   "h": 272
+  },
+  "ruin_wall_1": {
+   "w": 216,
+   "h": 245
+  },
+  "ruin_wall_2": {
+   "w": 264,
+   "h": 300
+  },
+  "gate_closed": {
+   "w": 208,
+   "h": 276
+  },
+  "gate_open": {
+   "w": 208,
+   "h": 270
+  }
+ }
+}
